@@ -1,0 +1,199 @@
+/* Landing scope: design tokens + viewport zoom scale model.
+   `.ld-theme` (tokens/font/colors) goes on the OUTER page wrapper so chrome
+   like the sticky nav can live OUTSIDE the zoomed subtree — position:sticky
+   and position:fixed both compute offsets in unzoomed coordinates and drift
+   mid-viewport when placed inside CSS zoom. `.ld` (zoom only) goes on the
+   <main> content. All section components consume these vars — zero hardcoded
+   hex in sections/. */
+
+.ld-theme {
+  /* SOMA DS palette — values from the design system tokens/colors.css
+     (vapor neutrals, sky accent, terracotta warm accent). Light theme is the
+     base; dark is reserved for accent bands only. */
+  --ld-bg: #f6f7f7; /* vapor-10 — page */
+  --ld-surface: #ffffff; /* vapor-0 — cards, inputs */
+  --ld-sunken: #edeff0; /* vapor-20 — footer, wells */
+  --ld-ink: #101315; /* vapor-100 — primary text */
+  --ld-text-2: #565f66; /* vapor-70 — secondary text */
+  --ld-text-3: #a7b0b6; /* vapor-50 — tertiary/captions */
+  --ld-line: #e2e5e7; /* vapor-30 — subtle borders */
+  --ld-line-strong: #cbd1d5; /* vapor-40 — input borders */
+  --ld-accent: #3e6a8c; /* sky-60 — primary CTA, links */
+  --ld-accent-hover: #2b4a63; /* sky-70 */
+  --ld-accent-soft: #eaf1f7; /* sky-10 — tinted surfaces */
+  --ld-terracotta: #c97f55; /* warm accent */
+  --ld-danger: #a3402f;
+  --ld-bg-dark: #101315; /* inverse band */
+  --ld-text-inverse: #ffffff;
+  --ld-mist: linear-gradient(180deg, #eaf1f7 0%, #f6f7f7 100%);
+  --ld-orb: radial-gradient(
+    circle at 32% 28%,
+    #ffffff 0%,
+    #d2e1ee 32%,
+    #86abcb 62%,
+    #2b4a63 100%
+  );
+
+  font-family: var(--font-body), 'Manrope', sans-serif;
+  background: var(--ld-bg);
+  color: var(--ld-ink);
+}
+
+.ld-serif {
+  font-family: var(--font-display), 'Iowan Old Style', Georgia, serif;
+  font-weight: 400;
+}
+
+/* Orb — the AI-presence motif. A soft halo circle; the liquid loop video (or
+   the static --ld-orb gradient fallback) sits inside via .ld-orb-media.
+   The halo breathes — slow, subliminal, like the reference mockups. */
+.ld-orb-halo {
+  display: grid;
+  place-items: center;
+  border-radius: 9999px;
+  background: radial-gradient(circle, #ffffff 0%, var(--ld-accent-soft) 58%, transparent 74%);
+  animation: ld-breathe 5.5s ease-in-out infinite alternate;
+}
+@keyframes ld-breathe {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.045);
+  }
+}
+.ld-orb-media {
+  border-radius: 9999px;
+  object-fit: cover;
+  background: var(--ld-orb);
+  box-shadow: 0 24px 80px rgba(62, 106, 140, 0.28);
+}
+/* The DS liquid-loop clip is a blob on a flat grey studio background; the
+   radial mask dissolves that background into the halo, and the inner scale
+   zooms the blob to fill the circle. */
+.ld-orb-mask {
+  overflow: hidden;
+  border-radius: 9999px;
+  -webkit-mask-image: radial-gradient(circle, #000 48%, transparent 68%);
+  mask-image: radial-gradient(circle, #000 48%, transparent 68%);
+}
+.ld-orb-mask video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transform: scale(1.15);
+}
+
+/* Proportional scaling. The design is authored at ONE canonical width (1440);
+   CSS zoom (not transform: scale — zoom reflows layout, keeps scroll/hit
+   targets correct) scales the whole page.
+
+   Below 1440 wide the page zooms DOWN with width; 1440→1920 content is fixed;
+   above 1920 the WHOLE page zooms UP with viewport width. The svh term keeps
+   the first screen (nav 64 + hero ≈710 at zoom 1) intact on short windows.
+   Divisor 780 = that measured budget + margin, so a 13" MacBook viewport
+   (~1440×790) runs at zoom 1 — only genuinely short windows shrink.
+
+   Below 1280 do NOT zoom — real responsive layout instead. */
+@media (min-width: 1280px) {
+  .ld {
+    zoom: min(calc(100vw / 1440px), calc(100svh / 780px), 1);
+  }
+}
+@media (min-width: 1920px) {
+  .ld {
+    zoom: min(calc(100vw / 1920px), calc(100svh / 850px));
+  }
+}
+
+/* Shimmer sweep for the primary CTA. */
+.ld-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.ld-shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(115deg, transparent 30%, rgba(255, 255, 255, 0.35) 50%, transparent 70%);
+  transform: translateX(-100%);
+  animation: ld-shimmer-sweep 3.2s ease-in-out infinite;
+}
+@keyframes ld-shimmer-sweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  60%,
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Marquee strip. */
+@keyframes ld-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.ld-marquee {
+  animation: ld-marquee 30s linear infinite;
+}
+
+/* Scroll reveal — sections rise in softly as they enter the viewport.
+   The Reveal component adds .ld-in via IntersectionObserver (once). */
+.ld-reveal {
+  opacity: 0;
+}
+.ld-reveal.ld-in {
+  animation: ld-rise 0.7s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+  animation-delay: var(--ld-reveal-delay, 0ms);
+}
+@keyframes ld-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+/* No JS → no observer → never hide content. */
+@media (scripting: none) {
+  .ld-reveal {
+    opacity: 1;
+  }
+}
+
+/* Hover lift for cards — quiet depth, no color change. */
+.ld-lift {
+  transition:
+    transform 0.35s cubic-bezier(0.22, 0.61, 0.36, 1),
+    box-shadow 0.35s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.ld-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 44px rgba(43, 74, 99, 0.1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ld-shimmer::after,
+  .ld-marquee,
+  .ld-orb-halo {
+    animation: none;
+  }
+  .ld-reveal {
+    opacity: 1;
+  }
+  .ld-reveal.ld-in {
+    animation: none;
+  }
+  .ld-lift,
+  .ld-lift:hover {
+    transform: none;
+    transition: none;
+  }
+}
