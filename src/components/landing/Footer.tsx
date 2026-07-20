@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { BRAND, PARENT_URL } from '@/lib/seo/constants';
+import { BRAND } from '@/lib/seo/constants';
 import { spokePath, spokesInBucket, type SpokeBucket } from '@/marketing/spokes/registry';
 import { Container } from './Container';
 
@@ -26,7 +26,6 @@ export const Footer = () => {
       title: 'Product',
       links: [
         { label: 'Features', href: '/#features' },
-        { label: 'Pricing', href: '/#pricing' },
         { label: 'FAQ', href: '/#faq' },
       ],
     },
@@ -48,9 +47,8 @@ export const Footer = () => {
     {
       title: 'Legal',
       links: [
-        // TODO(brand): point at the real privacy/terms URLs.
-        { label: 'Privacy', href: `${PARENT_URL}/privacy`, external: true },
-        { label: 'Terms', href: `${PARENT_URL}/terms`, external: true },
+        { label: 'Privacy', href: '/privacy' },
+        { label: 'Terms', href: '/terms' },
       ],
     },
   ].filter((c): c is FooterColumn => c !== null);

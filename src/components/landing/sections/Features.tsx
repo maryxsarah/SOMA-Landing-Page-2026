@@ -19,9 +19,9 @@ export const Features = () => (
         <Reveal className="ld-lift rounded-2xl bg-[var(--ld-accent-soft)] p-8 md:row-span-2">
           <h3 className="text-lg font-bold">Reasons across everything at once</h3>
           <p className="mt-2 text-[15px] leading-relaxed text-[color:var(--ld-text-2)]">
-            Every device produces its own score, in its own app, blind to the others. SOMA’s agents
-            read them jointly — your sleep in the context of your cycle day, your readiness in the
-            context of yesterday’s meals and this morning’s calendar — and answer as one voice.
+            Every device produces its own score, in its own app, blind to the others. SOMA is your
+            personalized health coach that connects all the dots and gives you one clear plan —
+            every single day!
           </p>
           <div className="mt-6 flex flex-wrap gap-2">
             {DEVICE_CHIPS.map((chip) => (

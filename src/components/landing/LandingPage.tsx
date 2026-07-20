@@ -6,7 +6,6 @@ import { Problem } from './sections/Problem';
 import { HowItWorks } from './sections/HowItWorks';
 import { Features } from './sections/Features';
 import { FounderNote } from './sections/FounderNote';
-import { Pricing } from './sections/Pricing';
 import { Faq } from './sections/Faq';
 import { WaitlistBand } from './sections/WaitlistBand';
 
@@ -20,8 +19,10 @@ import { WaitlistBand } from './sections/WaitlistBand';
  *   WhoItsFor → Ecosystem → CtaSection → PricingSection → Faq →
  *   WaitlistBand/ReadyBand → Footer
  *
- * Nav anchors expect sections with id="features", id="how-it-works",
- * id="pricing", id="faq" to exist once those sections are built.
+ * Nav anchors expect sections with id="features", id="how-it-works", id="faq"
+ * to exist once those sections are built. Pricing section is pulled for now
+ * (see ./sections/Pricing.tsx — not deleted, just unmounted) — re-add the
+ * import and `<Pricing />` here, plus the nav/footer links, when it's back.
  */
 export const LandingPage = () => (
   <div className="ld-theme min-h-screen">
@@ -34,7 +35,6 @@ export const LandingPage = () => (
       <HowItWorks />
       <Features />
       <FounderNote />
-      <Pricing />
       <Faq />
       <WaitlistBand />
       <Footer />

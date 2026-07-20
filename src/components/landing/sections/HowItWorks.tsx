@@ -6,17 +6,17 @@ const STEPS = [
   {
     n: '01',
     title: 'Connect what you already own',
-    body: 'Ring, band, scale, CGM, Apple Health — connected once through official APIs, read automatically. There’s a manual and CSV fallback too, so no single integration change can take your data away.',
+    body: 'Your ring, your wearable, your CGM, Apple Health, or any other health device you already own. SOMA learns who you are and gets smarter every day.',
   },
   {
     n: '02',
     title: 'Tell SOMA about your day',
-    body: 'A meal, a workout, how you slept — type it or say it. SOMA’s agents reason jointly across everything: cycle day, sleep, readiness, injury history, recent meals, body composition.',
+    body: 'A meal, a workout, how you slept — type it or say it. SOMA adjusts your plan based on how you feel, and what your body signals.',
   },
   {
     n: '03',
     title: 'Get one plan, not four dashboards',
-    body: 'One response that already did the cross-referencing for you. And when something changes enough to matter, SOMA reaches out first — rather than waiting to be asked.',
+    body: 'One clear plan, that already knows you and your body. When something changes, SOMA checks in with you - rather than waiting to be asked.',
   },
 ];
 

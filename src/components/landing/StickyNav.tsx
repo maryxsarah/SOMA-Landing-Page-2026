@@ -9,7 +9,6 @@ import { CtaButton } from './CtaButton';
 const NAV_ITEMS = [
   { label: 'Features', anchor: '#features' },
   { label: 'How it works', anchor: '#how-it-works' },
-  { label: 'Pricing', anchor: '#pricing' },
   { label: 'FAQ', anchor: '#faq' },
 ];
 

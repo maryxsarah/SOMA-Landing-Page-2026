@@ -4,18 +4,18 @@ import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/cn';
 import { track } from '@/lib/analytics';
-import { readOriginalAttribution } from '@/lib/attribution';
-import { asset } from '@/lib/asset';
 
 const EMAIL_RE = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+
+/** Kit (ConvertKit) form 9698415, account soma4health (uid c77655bc36). CORS-open. */
+const KIT_FORM_ACTION = 'https://app.kit.com/forms/9698415/subscriptions';
 
 type Status = 'idle' | 'submitting' | 'success' | 'error';
 
 /**
- * Email-capture form (waitlist / lead-magnet opt-in). Anti-bot without
- * CAPTCHA: honeypot field + time gate, both verified server-side. Every
- * submission carries the first-touch UTM snapshot — each row records which
- * spoke/campaign brought the signup.
+ * Email-capture form (waitlist / lead-magnet opt-in), submitting straight to
+ * Kit — no in-app storage. Anti-bot without CAPTCHA: honeypot field + time
+ * gate, both checked client-side before ever contacting Kit.
  */
 export const WaitlistForm: React.FC<{ className?: string }> = ({ className }) => {
   const pathname = usePathname();
@@ -39,21 +39,23 @@ export const WaitlistForm: React.FC<{ className?: string }> = ({ className }) =>
       setStatus('error');
       return;
     }
+    // Honeypot filled or submitted too fast: pretend success, never contact Kit.
+    if (hp || Date.now() - mountedAt.current < 2000) {
+      setStatus('success');
+      return;
+    }
     setStatus('submitting');
     track('waitlist_submit', { path: pathname ?? '/' });
     try {
-      const res = await fetch(asset('/api/waitlist'), {
+      const body = new FormData();
+      body.append('email_address', email);
+      const res = await fetch(KIT_FORM_ACTION, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          email,
-          hp,
-          elapsedMs: Date.now() - mountedAt.current,
-          utm: readOriginalAttribution(),
-          path: pathname ?? '/',
-        }),
+        headers: { Accept: 'application/json' },
+        body,
       });
-      if (!res.ok) throw new Error('request failed');
+      const data = await res.json();
+      if (!res.ok || data.status !== 'success') throw new Error('request failed');
       setStatus('success');
       track('waitlist_success', { path: pathname ?? '/' });
     } catch {

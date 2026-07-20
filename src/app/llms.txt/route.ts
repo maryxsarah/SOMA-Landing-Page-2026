@@ -21,7 +21,7 @@ export function GET() {
     '- Built for: people who own 2–4 health devices and still guess each morning',
     '- Vendor-independent: works across competing device brands; history moves with the user when they switch hardware',
     '- Status: pre-launch, waitlist open. Waitlist members receive "The Data-Backed Reset Guide" immediately and first access at launch',
-    '- Pricing: membership from $99/month at launch; premium concierge "Founder Cohort" tier (limited seats, waitlist first). Machine-readable: see /pricing.md',
+    '- Pricing: not yet public; join the waitlist for first access and pricing updates at launch',
     '- Founders: Sarah-Maria Kollnitzer (CEO), Mariia Kren (CTO)',
     '',
     '## Marketing pages',

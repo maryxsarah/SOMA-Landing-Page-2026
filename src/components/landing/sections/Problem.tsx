@@ -13,9 +13,9 @@ export const Problem = () => (
   <section id="problem" className="py-24">
     <Container className="flex flex-col items-center gap-6 text-center">
       <Reveal className="flex flex-col items-center gap-6">
-      <Eyebrow>the real problem</Eyebrow>
+      <Eyebrow>SOMA is for you, not everybody else</Eyebrow>
       <h2 className="ld-serif max-w-3xl text-4xl leading-tight font-medium md:text-5xl">
-        You don’t have a data problem. You have a <em className="italic">translation</em> problem.
+        Your tailored wellness <em className="italic">journey</em> is about to start.
       </h2>
       <p className="max-w-2xl text-lg text-[color:var(--ld-text-2)]">
         Your ring knows your recovery. Your calendar knows your load. Your sleep app knows your

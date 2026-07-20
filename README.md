@@ -33,8 +33,10 @@ npm test        # spoke guardrail tests (CI gate)
   no-op unless its env is set), UTM attribution in `src/lib/attribution.ts`,
   every CTA fires `landing_cta_click` via `CtaButton`.
 - **Waitlist** — `NEXT_PUBLIC_LAUNCH_MODE=waitlist|live` flips every CTA
-  (`src/lib/launch.ts`). Form: honeypot + time gate + UTM on every row;
-  API: `src/app/api/waitlist/route.ts` (storage is a TODO stub).
+  (`src/lib/launch.ts`). Form: honeypot + time gate, both checked client-side;
+  submits straight to Kit (ConvertKit) form 9698415
+  (`src/components/landing/WaitlistForm.tsx`) — Kit is the system of record,
+  no in-app storage.
 - **Mounting** — standalone by default; to mount under a parent domain path
   set `NEXT_PUBLIC_BASE_PATH` + `NEXT_PUBLIC_SITE_ORIGIN` (see `.env.example`).
   Raw asset paths must go through `asset()` / `LocalImage` (basePath traps).

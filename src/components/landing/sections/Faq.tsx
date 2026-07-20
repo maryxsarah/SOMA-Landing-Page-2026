@@ -24,10 +24,6 @@ export const FAQ_ITEMS: { q: string; a: string }[] = [
     q: 'What is the Founder Cohort?',
     a: 'A small concierge tier for the first users: hands-on onboarding with the founders, a premium three-month program, and direct input into what gets built. Seats are limited and offered to the waitlist first.',
   },
-  {
-    q: 'What does SOMA cost?',
-    a: 'Membership starts from $99/month at launch — priced against the $30–90/month people already spend across device apps, plus $200–600/month for separate coaches. Credits cover on-demand depth like audits and doctor-visit summaries.',
-  },
 ];
 
 export const Faq = () => (
