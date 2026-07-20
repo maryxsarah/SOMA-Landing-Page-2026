@@ -38,9 +38,8 @@ export const Hero = () => (
       </Reveal>
       <Reveal delay={280}>
       <p data-speakable className="max-w-2xl text-xl text-[color:var(--ld-text-2)]">
-        SOMA is one home screen for every health device you own. Its AI agents reason across your
-        ring, band, scale and CGM — sleep, cycle day, readiness, meals — and answer with one plan
-        for today. One response, not four dashboards.
+        The health coach for all devices in your pocket. One App for your health, wellness, and
+        longevity.
       </p>
       </Reveal>
       <Reveal delay={360} className="w-full max-w-md">
