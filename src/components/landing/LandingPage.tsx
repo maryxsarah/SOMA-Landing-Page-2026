@@ -1,6 +1,7 @@
 import { StickyNav } from './StickyNav';
 import { Footer } from './Footer';
 import { Hero } from './sections/Hero';
+import { HeroDemo } from './sections/HeroDemo';
 import { MarqueeStrip } from './sections/MarqueeStrip';
 import { Problem } from './sections/Problem';
 import { HowItWorks } from './sections/HowItWorks';
@@ -30,6 +31,7 @@ export const LandingPage = () => (
     <StickyNav />
     <main className="ld">
       <Hero />
+      <HeroDemo />
       <MarqueeStrip />
       <Problem />
       <HowItWorks />
