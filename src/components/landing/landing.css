@@ -168,6 +168,15 @@
   }
 }
 
+/* Scroll-snap tracks driven by their own dots/arrows — the native bar would be
+   a second, competing control. */
+.ld-noscrollbar {
+  scrollbar-width: none;
+}
+.ld-noscrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 /* Hover lift for cards — quiet depth, no color change. */
 .ld-lift {
   transition:
