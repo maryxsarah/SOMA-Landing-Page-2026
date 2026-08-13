@@ -1,0 +1,201 @@
+{
+  "nav": {
+    "features": "Funktionen",
+    "howItWorks": "So funktioniert's",
+    "faq": "FAQ"
+  },
+  "common": {
+    "ctaLabelLive": "Jetzt starten",
+    "ctaLabelWaitlist": "Zur Warteliste",
+    "previousScreens": "Vorherige Screens",
+    "nextScreens": "Nächste Screens",
+    "screenOf": "Screen {i} von {n}"
+  },
+  "hero": {
+    "eyebrow": "deine gesundheitsreise beginnt jetzt",
+    "h1": "Finde deinen nächsten <em>besten Tag</em>.",
+    "lead": "Der Gesundheitscoach für alle Geräte in deiner Tasche. Eine App für deine Gesundheit, dein Wohlbefinden und deine Langlebigkeit."
+  },
+  "heroDemo": {
+    "eyebrow": "ein erster blick auf SOMA",
+    "h2": "Ein Blick auf deinen Tag. <em>Ein klarer Plan.</em>",
+    "screens": {
+      "intro": {
+        "caption": "Was SOMA macht",
+        "alt": "SOMA-Einstiegsbildschirm: \"Finde deinen nächsten besten Tag\", der Ablauf Geräte → SOMA liest die Daten → klarer Tagesplan, sowie ein Diagramm, das zeigt, wie sich Konsistenz über sechs Monate aufbaut"
+      },
+      "onboarding": {
+        "caption": "Eingerichtet in einer Minute",
+        "alt": "SOMA-Onboarding-Bildschirm: \"Einfacher trainieren\", mit einem Balkendiagramm, das den Fortschritt ohne SOMA und mit SOMA vergleicht"
+      },
+      "home": {
+        "caption": "Deine Woche auf einen Blick",
+        "alt": "SOMA-Startbildschirm: die letzten sieben Tage als gefüllte Ringe mit dem heutigen Tag hervorgehoben, sowie die heutige Bereitschaft als \"Moderat\" eingestuft, darunter das abgeschlossene 35-minütige Oberkörper-Workout"
+      },
+      "readiness": {
+        "caption": "Der Plan für heute",
+        "alt": "SOMA-Bereitschaftsdetail: ein Schrittziel von 7.000–9.000 für heute und eine Liste passender Workouts, mit der ausgewählten 35-minütigen Oberkörper-Einheit"
+      },
+      "workout": {
+        "caption": "Das komplette Workout",
+        "alt": "KI-generiertes SOMA-Workout: Aufwärm- und Kraftblöcke mit genauen Sätzen, Wiederholungen, Gewichten und Ausführungshinweisen für jede Übung"
+      },
+      "complete": {
+        "caption": "Eintragen – und warum",
+        "alt": "SOMA-Workout-Bildschirm, gescrollt bis zum Cool-down, mit dem Button \"Workout als abgeschlossen markieren\" und einer \"Warum heute\"-Notiz, die den Oura-Bereitschaftswert hinter dem Plan erklärt"
+      },
+      "profile": {
+        "caption": "Deine Geräte",
+        "alt": "SOMA-Profilbildschirm: Apple Health und Oura verbunden, Whoop bereit zum Verbinden, plus Einstellungen für Kontakt-E-Mail und Trainingserfahrung"
+      }
+    }
+  },
+  "marquee": {
+    "ariaLabel": "Muster, die SOMA erkennt",
+    "patterns": [
+      "Deine Bereitschaft sagt: Pause. Dein Kalender sagt: Volldampf.",
+      "Ein „guter“ Schlafwert, ein furchtbares Workout.",
+      "Der Plan weiß nicht, welche Woche gerade ist.",
+      "Der Heißhunger ist nicht das Problem.",
+      "Sich gut zu fühlen ist nicht dasselbe wie erholt zu sein.",
+      "Der Kaffee und das Aufwachen um 2 Uhr nachts."
+    ]
+  },
+  "problem": {
+    "eyebrow": "SOMA ist für dich, nicht für alle anderen",
+    "h2": "Deine maßgeschneiderte Wellness-<em>Reise</em> beginnt jetzt.",
+    "lead": "Dein Ring kennt deine Erholung. Dein Kalender kennt deine Belastung. Deine Schlaf-App kennt deine Schlafphasen. Keiner von ihnen spricht mit dem anderen – und keiner wurde je dafür gebaut. Also übernimmst du die Übersetzung selbst. Meistens schlecht. Meistens allein. Meistens um 6 Uhr morgens, mit einem halben Kaffee intus und zwölf Minuten bis zum ersten Meeting.",
+    "signals": [
+      { "a": "Niedriger Bereitschaftswert", "b": "Vollgepackter Kalender" },
+      { "a": "Hoher Schlafwert", "b": "Schweres, kraftloses Workout" },
+      { "a": "„Ich fühle mich super“ – heute", "b": "Niedrige HRV über Nacht" }
+    ],
+    "vs": "VS",
+    "quote": "„Die Zahl hat dich nie angelogen. Sie war nur noch nicht fertig zu erzählen.“",
+    "quoteCaption": "— Der datengestützte Reset-Guide"
+  },
+  "howItWorks": {
+    "eyebrow": "so funktioniert's",
+    "h2": "Zwei Minuten, jeden Morgen, vor der ersten wirklichen Entscheidung des Tages",
+    "steps": [
+      {
+        "title": "Verbinde, was du schon besitzt",
+        "body": "Deinen Ring, dein Wearable, dein CGM, Apple Health oder jedes andere Gesundheitsgerät, das du bereits besitzt. SOMA lernt, wer du bist, und wird jeden Tag klüger."
+      },
+      {
+        "title": "Erzähl SOMA von deinem Tag",
+        "body": "Eine Mahlzeit, ein Workout, wie du geschlafen hast – tippe es oder sag es. SOMA passt deinen Plan danach an, wie du dich fühlst und was dein Körper signalisiert."
+      },
+      {
+        "title": "Ein Plan statt vier Dashboards",
+        "body": "Ein klarer Plan, der dich und deinen Körper schon kennt. Wenn sich etwas ändert, meldet sich SOMA bei dir - statt zu warten, bis du fragst."
+      }
+    ]
+  },
+  "features": {
+    "eyebrow": "was soma macht",
+    "h2": "Ein Startbildschirm für deinen ganzen Körper",
+    "deviceChips": ["oura-ring", "whoop", "apple health", "smartwaage", "CGM", "+ deine gewohnheiten"],
+    "cards": [
+      {
+        "title": "Denkt alles gleichzeitig mit",
+        "body": "Jedes Gerät erzeugt seinen eigenen Wert, in seiner eigenen App, blind für die anderen. SOMA ist dein persönlicher Gesundheitscoach, der alle Punkte verbindet und dir jeden einzelnen Tag einen klaren Plan gibt!"
+      },
+      {
+        "title": "Herstellerunabhängig von Grund auf",
+        "body": "Gerätehersteller können kein Coaching auf der Hardware eines Konkurrenten aufbauen – strukturell geht das gar nicht. SOMA steht über dem Hardware-Wettstreit: Es funktioniert mit dem, was du jetzt besitzt, und mit allem, worauf du als Nächstes wechselst."
+      },
+      {
+        "title": "Meldet sich zuerst",
+        "body": "Wenn sich etwas so verändert, dass es wichtig wird, schreibt dir SOMA – es wartet nicht in einer App darauf, dass du dich erinnerst nachzusehen. Antworte per Sprache oder Text, wie bei einem Coach."
+      },
+      {
+        "title": "Tiefe auf Abruf",
+        "body": "Über den Tagesplan hinaus: biometrische Auswertungen und Zusammenfassungen für den Arztbesuch, wenn du tiefer gehen willst – eine schriftliche Einordnung dessen, was deine Daten aussagen, bereit für die Gespräche, die zählen."
+      }
+    ]
+  },
+  "founderNote": {
+    "eyebrow": "warum es soma gibt",
+    "quote": "„Ich habe mir den Ring gekauft. Ich habe die Apps heruntergeladen. Ich hatte mehr Daten über mich selbst als je zuvor in meinem Leben – und wusste trotzdem nicht, was ich damit eigentlich <em>tun</em> sollte. Zwei Jahre lang habe ich die Übersetzung von Hand gemacht. SOMA ist das Werkzeug, das ich mir die ganze Zeit gewünscht hätte.“",
+    "name": "Sarah-Maria Kollnitzer",
+    "title": "Gründerin & CEO — SOMAs erste und anspruchsvollste Nutzerin",
+    "tagline": "Aufbau in der Öffentlichkeit — jede Woche eine neue Feldnotiz."
+  },
+  "faq": {
+    "eyebrow": "fragen",
+    "h2": "Beantwortet, bevor du fragen musstest",
+    "items": [
+      {
+        "q": "Mit welchen Geräten funktioniert SOMA?",
+        "a": "Ringe, Bänder, Smartwaagen und CGMs – verbunden über offizielle APIs, mit Apple Health als Drehscheibe, plus manueller Eingabe/CSV als Fallback. SOMA ist herstellerunabhängig: Es funktioniert mit den Geräten, die du jetzt besitzt, und mit allem, worauf du als Nächstes wechselst."
+      },
+      {
+        "q": "Muss ich neue Hardware kaufen?",
+        "a": "Nein. SOMA liest die Wearables und Daten, die du bereits hast. Nichts daran erfordert ein neues Gerät, ein neues App-Abo oder einen neuen Kauf – der ganze Sinn besteht darin, das, was du besitzt, endlich miteinander sprechen zu lassen."
+      },
+      {
+        "q": "Ist SOMA ein Medizinprodukt?",
+        "a": "Nein. SOMA ist ein allgemeines Wellness-Tool: Es hilft dir, deine eigenen Daten zu verstehen und deinen Tag zu planen. Es stellt keine Diagnosen, behandelt nicht und ersetzt nicht die Beratung durch medizinisches Fachpersonal – bei medizinischen Fragen wende dich an deinen Arzt oder deine Ärztin."
+      },
+      {
+        "q": "Was passiert, nachdem ich der Warteliste beigetreten bin?",
+        "a": "Du bekommst den datengestützten Reset-Guide sofort in dein Postfach – sechs Feldnotizen zum Lesen deiner Wearable-Daten. Danach gelegentlich eine weitere Feldnotiz und Updates zum Launch. Mitglieder der Warteliste erhalten vor allen anderen Zugang."
+      },
+      {
+        "q": "Was ist die Gründer-Kohorte?",
+        "a": "Eine kleine Concierge-Stufe für die ersten Nutzer: persönliches Onboarding mit dem Gründerteam, ein Premium-Programm über drei Monate und direkter Einfluss darauf, was gebaut wird. Die Plätze sind begrenzt und werden zuerst der Warteliste angeboten."
+      }
+    ],
+    "availability": {
+      "q": "Ist SOMA schon verfügbar?",
+      "a": "SOMA befindet sich vor dem Launch. Wenn du der Warteliste beitrittst, erhältst du sofort den datengestützten Reset-Guide sowie frühzeitigen Zugang vor dem öffentlichen Launch; die Gründer-Kohorte als Concierge-Stufe wird zuerst der Warteliste angeboten."
+    }
+  },
+  "waitlistBand": {
+    "eyebrow": "starte da, wo du stehst",
+    "h2": "Hol dir den <em>datengestützten Reset-Guide</em>",
+    "lead": "Sechs Feldnotizen darüber, wie du aus den Daten, die du schon sammelst, ruhigere, bessere Morgen machst – kostenlos, heute in deinem Postfach. Mit deiner Anmeldung kommst du auf die SOMA-Warteliste und sicherst dir beim Launch frühzeitigen Zugang."
+  },
+  "waitlistForm": {
+    "emailLabel": "E-Mail-Adresse",
+    "emailPlaceholder": "du@beispiel.com",
+    "joinButton": "Beitreten",
+    "joiningButton": "Wird angemeldet…",
+    "successMessage": "Du stehst auf der Liste – der Reset-Guide ist auf dem Weg in dein Postfach.",
+    "errorMessage": "Etwas ist schiefgelaufen – überprüfe die E-Mail-Adresse und versuche es erneut.",
+    "disclaimer": "Du bekommst sofort den kostenlosen Reset-Guide, danach nur noch Updates zum Launch – sonst nichts."
+  },
+  "footer": {
+    "productTitle": "Produkt",
+    "featuresLink": "Funktionen",
+    "faqLink": "FAQ",
+    "featuresColumnTitle": "Funktionen",
+    "howToColumnTitle": "Anleitungen",
+    "useCasesColumnTitle": "Anwendungsfälle",
+    "alternativesColumnTitle": "Alternativen",
+    "companyTitle": "Unternehmen",
+    "contactLink": "Kontakt",
+    "investorsLink": "Investoren",
+    "legalTitle": "Rechtliches",
+    "privacyLink": "Datenschutz",
+    "termsLink": "Nutzungsbedingungen",
+    "copyright": "© {year} {parentName}. Alle Rechte vorbehalten."
+  },
+  "legal": {
+    "lastUpdated": "Zuletzt aktualisiert am {date}"
+  },
+  "spoke": {
+    "atAGlance": "Auf einen Blick",
+    "faqTitle": "FAQ"
+  },
+  "home": {
+    "metaDescription": "SOMA ist ein herstellerunabhängiger KI-Gesundheitsagent. Er liest deinen Ring, dein Band, deine Waage und dein CGM gemeinsam und antwortet mit einem Plan für heute — nicht vier Dashboards.",
+    "jsonLdFeatures": [
+      "Ein Tagesplan, der über alle verbundenen Wearables hinweg durchdacht ist",
+      "Funktioniert mit Ringen, Bändern, Smartwaagen und CGMs",
+      "Check-ins per Chat oder Sprache — tippen oder sagen",
+      "Proaktive Kontaktaufnahme, wenn sich etwas so verändert, dass es wichtig wird"
+    ]
+  }
+}

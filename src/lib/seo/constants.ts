@@ -15,6 +15,21 @@ export const BRAND = {
   tagline: 'Find your next best day.',
 } as const;
 
+/** `openGraph.locale` wants an underscore region tag; next-intl's routing
+ * locales are bare language codes — map explicitly rather than guess a
+ * region per code. */
+export const OG_LOCALE_MAP: Record<string, string> = {
+  en: 'en_US',
+  es: 'es_ES',
+  fr: 'fr_FR',
+  it: 'it_IT',
+  de: 'de_DE',
+  ru: 'ru_RU',
+  ka: 'ka_GE',
+  hy: 'hy_AM',
+  sr: 'sr_RS',
+};
+
 /** Third-party identity URLs only (socials, Crunchbase, wiki) — never self. */
 export const ORG_SAME_AS: readonly string[] = [];
 

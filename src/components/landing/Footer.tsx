@@ -1,8 +1,16 @@
-import Link from 'next/link';
+import { useLocale, useTranslations } from 'next-intl';
+import { Link } from '@/i18n/navigation';
 import { BRAND } from '@/lib/seo/constants';
 import { spokePath, spokesInBucket, type SpokeBucket } from '@/marketing/spokes/registry';
+import { localizeSpokeCopy } from '@/marketing/spokes/i18n';
+import type { Locale } from '@/i18n/routing';
 import { Container } from './Container';
+import { LocaleSwitcher } from './LocaleSwitcher';
 
+// English-only fallback (Latin-case capitalization) for spokes whose locale
+// override doesn't set an explicit navLabel — non-Latin scripts (Georgian,
+// Armenian) have no case distinction, so their overrides must always set
+// navLabel explicitly rather than relying on this.
 const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 
 interface FooterColumn {
@@ -10,8 +18,8 @@ interface FooterColumn {
   links: { label: string; href: string; external?: boolean }[];
 }
 
-function spokeColumn(title: string, bucket: SpokeBucket): FooterColumn | null {
-  const spokes = spokesInBucket(bucket);
+function spokeColumn(title: string, bucket: SpokeBucket, locale: Locale): FooterColumn | null {
+  const spokes = spokesInBucket(bucket).map((s) => localizeSpokeCopy(s, locale));
   if (spokes.length === 0) return null;
   return {
     title,
@@ -21,34 +29,36 @@ function spokeColumn(title: string, bucket: SpokeBucket): FooterColumn | null {
 
 /** Full-bleed footer; sitemap columns are GENERATED from the spoke registry. */
 export const Footer = () => {
+  const t = useTranslations('footer');
+  const locale = useLocale() as Locale;
   const columns: FooterColumn[] = [
     {
-      title: 'Product',
+      title: t('productTitle'),
       links: [
-        { label: 'Features', href: '/#features' },
-        { label: 'FAQ', href: '/#faq' },
+        { label: t('featuresLink'), href: '/#features' },
+        { label: t('faqLink'), href: '/#faq' },
       ],
     },
-    spokeColumn('Features', 'features'),
-    spokeColumn('How to', 'how-to'),
-    spokeColumn('Use cases', 'for'),
-    spokeColumn('Alternatives', 'alternatives'),
+    spokeColumn(t('featuresColumnTitle'), 'features', locale),
+    spokeColumn(t('howToColumnTitle'), 'how-to', locale),
+    spokeColumn(t('useCasesColumnTitle'), 'for', locale),
+    spokeColumn(t('alternativesColumnTitle'), 'alternatives', locale),
     {
-      title: 'Company',
+      title: t('companyTitle'),
       links: [
-        { label: 'Contact', href: 'mailto:team@soma4health.com', external: true },
+        { label: t('contactLink'), href: 'mailto:team@soma4health.com', external: true },
         {
-          label: 'Investors',
+          label: t('investorsLink'),
           href: 'mailto:team@soma4health.com?subject=SOMA%20investor%20enquiry',
           external: true,
         },
       ],
     },
     {
-      title: 'Legal',
+      title: t('legalTitle'),
       links: [
-        { label: 'Privacy', href: '/privacy' },
-        { label: 'Terms', href: '/terms' },
+        { label: t('privacyLink'), href: '/privacy' },
+        { label: t('termsLink'), href: '/terms' },
       ],
     },
   ].filter((c): c is FooterColumn => c !== null);
@@ -87,9 +97,12 @@ export const Footer = () => {
             </div>
           ))}
         </div>
-        <p className="text-xs text-[color:var(--ld-text-3)]">
-          © {new Date().getFullYear()} {BRAND.parentName}. All rights reserved.
-        </p>
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-xs text-[color:var(--ld-text-3)]">
+            {t('copyright', { year: new Date().getFullYear(), parentName: BRAND.parentName })}
+          </p>
+          <LocaleSwitcher />
+        </div>
       </Container>
     </footer>
   );

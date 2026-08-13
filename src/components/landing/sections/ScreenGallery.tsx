@@ -1,6 +1,7 @@
 'use client';
 
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { useTranslations } from 'next-intl';
 import { LocalImage } from '@/components/LocalImage';
 
 export type Screen = {
@@ -20,6 +21,7 @@ export type Screen = {
  * scrollLeft drift out of step with clientWidth.
  */
 export const ScreenGallery = ({ screens }: { screens: readonly Screen[] }) => {
+  const t = useTranslations('common');
   const trackRef = useRef<HTMLUListElement>(null);
   const [perView, setPerView] = useState(1);
   const [page, setPage] = useState(0);
@@ -88,8 +90,8 @@ export const ScreenGallery = ({ screens }: { screens: readonly Screen[] }) => {
         </ul>
 
         {[
-          { dir: -1, label: 'Previous screens', glyph: '‹', side: 'left-0 md:-left-5' },
-          { dir: 1, label: 'Next screens', glyph: '›', side: 'right-0 md:-right-5' },
+          { dir: -1, label: t('previousScreens'), glyph: '‹', side: 'left-0 md:-left-5' },
+          { dir: 1, label: t('nextScreens'), glyph: '›', side: 'right-0 md:-right-5' },
         ].map((arrow) => (
           <button
             key={arrow.label}
@@ -112,7 +114,7 @@ export const ScreenGallery = ({ screens }: { screens: readonly Screen[] }) => {
           <button
             key={index}
             type="button"
-            aria-label={`Screens ${index + 1} of ${pageCount}`}
+            aria-label={t('screenOf', { i: index + 1, n: pageCount })}
             aria-current={index === page}
             onClick={() => goTo(index)}
             className={`h-2.5 rounded-full transition-all ${

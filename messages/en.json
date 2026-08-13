@@ -1,0 +1,201 @@
+{
+  "nav": {
+    "features": "Features",
+    "howItWorks": "How it works",
+    "faq": "FAQ"
+  },
+  "common": {
+    "ctaLabelLive": "Get started",
+    "ctaLabelWaitlist": "Join the waitlist",
+    "previousScreens": "Previous screens",
+    "nextScreens": "Next screens",
+    "screenOf": "Screens {i} of {n}"
+  },
+  "hero": {
+    "eyebrow": "your health journey starts now",
+    "h1": "Find your next <em>best day</em>.",
+    "lead": "The health coach for all devices in your pocket. One App for your health, wellness, and longevity."
+  },
+  "heroDemo": {
+    "eyebrow": "a first look at SOMA",
+    "h2": "One read of your day. <em>One clear plan.</em>",
+    "screens": {
+      "intro": {
+        "caption": "What SOMA does",
+        "alt": "SOMA intro screen: \"Find your next best day\", the devices → SOMA reads it → clear daily plan flow, and a chart showing consistency compounding over six months"
+      },
+      "onboarding": {
+        "caption": "Setup in a minute",
+        "alt": "SOMA onboarding screen: \"A simpler way to workout\", with a bar chart comparing progress without SOMA and with SOMA"
+      },
+      "home": {
+        "caption": "Your week at a glance",
+        "alt": "SOMA home screen: the last seven days as filled rings with today highlighted, and today's readiness read as Moderate with the completed 35-minute upper body workout below"
+      },
+      "readiness": {
+        "caption": "Today's plan",
+        "alt": "SOMA readiness detail: a 7,000–9,000 step target for today and a list of workouts that fit it, with the 35-minute upper body session picked"
+      },
+      "workout": {
+        "caption": "The full workout",
+        "alt": "SOMA AI-generated workout: warm-up and strength blocks with exact sets, reps, loads and how to perform each exercise"
+      },
+      "complete": {
+        "caption": "Log it, and why",
+        "alt": "SOMA workout screen scrolled to the cool-down, the Mark Workout Complete button, and a \"Why today\" note explaining the Oura readiness score behind the plan"
+      },
+      "profile": {
+        "caption": "Your devices",
+        "alt": "SOMA profile screen: Apple Health and Oura connected, Whoop ready to connect, plus contact email and training experience settings"
+      }
+    }
+  },
+  "marquee": {
+    "ariaLabel": "Patterns SOMA reads",
+    "patterns": [
+      "Your readiness says rest. Your calendar says grind.",
+      "A “good” sleep score, a terrible workout.",
+      "The plan doesn’t know what week it is.",
+      "The craving isn’t the problem.",
+      "Feeling fine isn’t the same as being recovered.",
+      "The coffee and the 2am wake-up."
+    ]
+  },
+  "problem": {
+    "eyebrow": "SOMA is for you, not everybody else",
+    "h2": "Your tailored wellness <em>journey</em> is about to start.",
+    "lead": "Your ring knows your recovery. Your calendar knows your load. Your sleep app knows your stages. None of them talk to each other — and none of them were ever built to. So you do the translation yourself. Usually badly. Usually alone. Usually at 6am with half a coffee in you and twelve minutes before the first meeting.",
+    "signals": [
+      { "a": "Low readiness score", "b": "Fully booked calendar" },
+      { "a": "High sleep score", "b": "Heavy, flat workout" },
+      { "a": "“I feel great” today", "b": "Low HRV overnight" }
+    ],
+    "vs": "VS",
+    "quote": "“The number was never lying to you. It just wasn’t finished talking.”",
+    "quoteCaption": "— The Data-Backed Reset Guide"
+  },
+  "howItWorks": {
+    "eyebrow": "how it works",
+    "h2": "Two minutes, every morning, before the first real decision of the day",
+    "steps": [
+      {
+        "title": "Connect what you already own",
+        "body": "Your ring, your wearable, your CGM, Apple Health, or any other health device you already own. SOMA learns who you are and gets smarter every day."
+      },
+      {
+        "title": "Tell SOMA about your day",
+        "body": "A meal, a workout, how you slept — type it or say it. SOMA adjusts your plan based on how you feel, and what your body signals."
+      },
+      {
+        "title": "Get one plan, not four dashboards",
+        "body": "One clear plan, that already knows you and your body. When something changes, SOMA checks in with you - rather than waiting to be asked."
+      }
+    ]
+  },
+  "features": {
+    "eyebrow": "what soma does",
+    "h2": "One home screen for your whole body",
+    "deviceChips": ["oura ring", "whoop", "apple health", "smart scale", "CGM", "+ your habits"],
+    "cards": [
+      {
+        "title": "Reasons across everything at once",
+        "body": "Every device produces its own score, in its own app, blind to the others. SOMA is your personalized health coach that connects all the dots and gives you one clear plan — every single day!"
+      },
+      {
+        "title": "Vendor-independent by design",
+        "body": "Device makers can’t build coaching on a competitor’s hardware — structurally, they can’t. SOMA sits above the hardware war: it works with what you own now and whatever you switch to next."
+      },
+      {
+        "title": "Reaches out first",
+        "body": "When something changes enough to matter, SOMA messages you — it doesn’t wait in an app for you to remember to check. Speak or type back like you would to a coach."
+      },
+      {
+        "title": "Depth on demand",
+        "body": "Beyond the daily plan: biometric audits and doctor-visit summaries when you want to go deeper — a written read of what your data has been saying, ready to bring into the conversations that matter."
+      }
+    ]
+  },
+  "founderNote": {
+    "eyebrow": "why soma exists",
+    "quote": "“I bought the ring. I downloaded the apps. I had more data about myself than I’d ever had in my life — and I still didn’t know what to actually <em>do</em> with any of it. I did the translation by hand for two years. SOMA is the tool I wished existed the whole time.”",
+    "name": "Sarah-Maria Kollnitzer",
+    "title": "Founder & CEO — SOMA’s first and most demanding user",
+    "tagline": "Building in public — a new field note every week."
+  },
+  "faq": {
+    "eyebrow": "questions",
+    "h2": "Asked before you had to",
+    "items": [
+      {
+        "q": "Which devices does SOMA work with?",
+        "a": "Rings, bands, smart scales and CGMs — connected through official APIs, with Apple Health as a hub, plus a manual/CSV fallback. SOMA is vendor-independent: it works with the devices you own now and whatever you switch to next."
+      },
+      {
+        "q": "Do I need to buy new hardware?",
+        "a": "No. SOMA reads the wearables and data you already have. Nothing in it requires a new device, a new app subscription, or a new purchase — the whole point is making what you own finally talk to each other."
+      },
+      {
+        "q": "Is SOMA a medical device?",
+        "a": "No. SOMA is a general-wellness tool: it helps you read your own data and plan your day. It does not diagnose, treat, or replace advice from a clinician — for medical questions, talk to your doctor."
+      },
+      {
+        "q": "What happens after I join the waitlist?",
+        "a": "You get The Data-Backed Reset Guide in your inbox right away — six field notes on reading your wearable data. After that, an occasional field note and launch updates. Waitlist members get access before anyone else."
+      },
+      {
+        "q": "What is the Founder Cohort?",
+        "a": "A small concierge tier for the first users: hands-on onboarding with the founders, a premium three-month program, and direct input into what gets built. Seats are limited and offered to the waitlist first."
+      }
+    ],
+    "availability": {
+      "q": "Is SOMA available today?",
+      "a": "SOMA is pre-launch. Joining the waitlist gets you The Data-Backed Reset Guide immediately and early access before the public launch; the Founder Cohort concierge tier is offered to the waitlist first."
+    }
+  },
+  "waitlistBand": {
+    "eyebrow": "start where you are",
+    "h2": "Get <em>The Data-Backed Reset Guide</em>",
+    "lead": "Six field notes on turning the data you already collect into calmer, better mornings — free, in your inbox today. Joining puts you on the SOMA waitlist for first access at launch."
+  },
+  "waitlistForm": {
+    "emailLabel": "Email address",
+    "emailPlaceholder": "you@example.com",
+    "joinButton": "Join",
+    "joiningButton": "Joining…",
+    "successMessage": "You’re on the list — the Reset Guide is on its way to your inbox.",
+    "errorMessage": "Something went wrong — check the email and try again.",
+    "disclaimer": "You’ll get the free Reset Guide right away, then launch updates — nothing else."
+  },
+  "footer": {
+    "productTitle": "Product",
+    "featuresLink": "Features",
+    "faqLink": "FAQ",
+    "featuresColumnTitle": "Features",
+    "howToColumnTitle": "How to",
+    "useCasesColumnTitle": "Use cases",
+    "alternativesColumnTitle": "Alternatives",
+    "companyTitle": "Company",
+    "contactLink": "Contact",
+    "investorsLink": "Investors",
+    "legalTitle": "Legal",
+    "privacyLink": "Privacy",
+    "termsLink": "Terms",
+    "copyright": "© {year} {parentName}. All rights reserved."
+  },
+  "legal": {
+    "lastUpdated": "Last updated {date}"
+  },
+  "spoke": {
+    "atAGlance": "At a glance",
+    "faqTitle": "FAQ"
+  },
+  "home": {
+    "metaDescription": "SOMA is a vendor-independent AI health agent. It reads your ring, band, scale and CGM together and answers with one plan for today — not four dashboards.",
+    "jsonLdFeatures": [
+      "One daily plan reasoned across every connected wearable",
+      "Works with rings, bands, smart scales and CGMs",
+      "Chat or voice check-ins — type it or say it",
+      "Proactive outreach when something changes enough to matter"
+    ]
+  }
+}

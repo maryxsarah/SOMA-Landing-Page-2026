@@ -1,16 +1,18 @@
 'use client';
 
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { useTranslations } from 'next-intl';
+import { Link, usePathname } from '@/i18n/navigation';
 import { BRAND } from '@/lib/seo/constants';
-import { CTA_HREF, CTA_LABEL } from '@/lib/launch';
+import { CTA_HREF } from '@/lib/launch';
+import { useCtaLabel } from '@/lib/useCtaLabel';
 import { CtaButton } from './CtaButton';
 
-const NAV_ITEMS = [
-  { label: 'Features', anchor: '#features' },
-  { label: 'How it works', anchor: '#how-it-works' },
-  { label: 'FAQ', anchor: '#faq' },
-];
+const NAV_ANCHORS = ['features', 'howItWorks', 'faq'] as const;
+const NAV_HASHES: Record<(typeof NAV_ANCHORS)[number], string> = {
+  features: '#features',
+  howItWorks: '#how-it-works',
+  faq: '#faq',
+};
 
 /**
  * Light translucent pinned nav — deliberately NO backdrop-blur: on zoomed
@@ -23,9 +25,15 @@ const NAV_ITEMS = [
  * Anchor hrefs work from spoke pages too (`/#x` off the landing).
  */
 export const StickyNav = () => {
+  const t = useTranslations('nav');
+  const ctaLabel = useCtaLabel();
   const pathname = usePathname();
   const onLanding = pathname === '/';
-  const href = (anchor: string) => (onLanding ? anchor : `/${anchor}`);
+  // `anchor` is either a bare `#hash` (needs `/` prefixed when off-landing)
+  // or an already-absolute path like CTA_HREF's `/auth` (left as-is —
+  // prefixing it again would produce `//auth`). Link (from @/i18n/navigation)
+  // adds the locale prefix underneath either way.
+  const href = (anchor: string) => (onLanding || anchor.startsWith('/') ? anchor : `/${anchor}`);
 
   return (
     <>
@@ -35,18 +43,18 @@ export const StickyNav = () => {
         {BRAND.productShort}
       </Link>
       <div className="hidden items-center gap-8 md:flex">
-        {NAV_ITEMS.map((item) => (
+        {NAV_ANCHORS.map((key) => (
           <Link
-            key={item.anchor}
-            href={href(item.anchor)}
+            key={key}
+            href={href(NAV_HASHES[key])}
             className="text-[14px] text-[color:var(--ld-text-2)] transition-colors hover:text-[color:var(--ld-ink)]"
           >
-            {item.label}
+            {t(key)}
           </Link>
         ))}
       </div>
-        <CtaButton href={onLanding ? CTA_HREF : `/${CTA_HREF}`} size="sm">
-          {CTA_LABEL}
+        <CtaButton href={href(CTA_HREF)} size="sm">
+          {ctaLabel}
         </CtaButton>
       </nav>
     </>

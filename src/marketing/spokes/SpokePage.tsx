@@ -1,3 +1,5 @@
+import { useLocale, useTranslations } from 'next-intl';
+import { localizedPath } from '@/i18n/routing';
 import { BASE_URL, BRAND, PARENT_URL } from '@/lib/seo/constants';
 import {
   breadcrumbList,
@@ -18,13 +20,15 @@ import type { SpokeDef } from './types';
 
 /** One renderer for all spoke archetypes, built on the landing DS. */
 export const SpokePage: React.FC<{ spoke: SpokeDef }> = ({ spoke }) => {
-  const path = spokePath(spoke);
+  const t = useTranslations('spoke');
+  const locale = useLocale();
+  const path = localizedPath(locale, spokePath(spoke));
   const url = `${BASE_URL}${path}`;
   const faqs = spoke.faq.map(resolveFaq);
 
   const ld: object[] = [
     softwareApplicationRef(),
-    webPage({ url: path, name: spoke.hero.h1 }),
+    webPage({ url: path, name: spoke.hero.h1, locale }),
     breadcrumbList([
       { name: BRAND.parentName, url: PARENT_URL },
       { name: BRAND.productShort, url: BASE_URL },
@@ -81,7 +85,7 @@ export const SpokePage: React.FC<{ spoke: SpokeDef }> = ({ spoke }) => {
 
       {spoke.comparison && (
         <Container className="pb-16">
-          <h2 className="ld-serif mb-6 text-3xl">At a glance</h2>
+          <h2 className="ld-serif mb-6 text-3xl">{t('atAGlance')}</h2>
           <div className="overflow-x-auto">
             <table className="w-full max-w-4xl text-left text-[color:var(--ld-text-2)]">
               <thead>
@@ -132,7 +136,7 @@ export const SpokePage: React.FC<{ spoke: SpokeDef }> = ({ spoke }) => {
 
       {faqs.length > 0 && (
         <Container className="pb-24">
-          <h2 className="ld-serif mb-6 text-3xl">FAQ</h2>
+          <h2 className="ld-serif mb-6 text-3xl">{t('faqTitle')}</h2>
           <div className="max-w-3xl space-y-3">
             {faqs.map((item, i) => (
               <details
