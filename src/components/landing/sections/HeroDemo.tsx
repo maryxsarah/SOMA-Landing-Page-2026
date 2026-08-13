@@ -1,3 +1,4 @@
+import { useTranslations } from 'next-intl';
 import { Container } from '../Container';
 import { Eyebrow } from '../Eyebrow';
 import { Reveal } from '../Reveal';
@@ -13,59 +14,42 @@ import { ScreenGallery, type Screen } from './ScreenGallery';
  * A carousel, not a grid: seven full-length phone screens in a 3-column grid
  * make a ~2200px-tall section, and squeezing them into one row puts the UI copy
  * below legibility. Three per page keeps them readable.
+ *
+ * `caption`/`alt` come from messages/{locale}.json `heroDemo.screens.<key>` —
+ * `src` stays fixed (an asset path, not translatable content).
  */
-const SCREENS: readonly Screen[] = [
-  {
-    src: '/media/screens/intro.webp',
-    caption: 'What SOMA does',
-    alt: 'SOMA intro screen: "Find your next best day", the devices → SOMA reads it → clear daily plan flow, and a chart showing consistency compounding over six months',
-  },
-  {
-    src: '/media/screens/onboarding.webp',
-    caption: 'Setup in a minute',
-    alt: 'SOMA onboarding screen: "A simpler way to workout", with a bar chart comparing progress without SOMA and with SOMA',
-  },
-  {
-    src: '/media/screens/home.webp',
-    caption: 'Your week at a glance',
-    alt: "SOMA home screen: the last seven days as filled rings with today highlighted, and today's readiness read as Moderate with the completed 35-minute upper body workout below",
-  },
-  {
-    src: '/media/screens/readiness.webp',
-    caption: "Today's plan",
-    alt: "SOMA readiness detail: a 7,000–9,000 step target for today and a list of workouts that fit it, with the 35-minute upper body session picked",
-  },
-  {
-    src: '/media/screens/workout.webp',
-    caption: 'The full workout',
-    alt: 'SOMA AI-generated workout: warm-up and strength blocks with exact sets, reps, loads and how to perform each exercise',
-  },
-  {
-    src: '/media/screens/complete.webp',
-    caption: 'Log it, and why',
-    alt: 'SOMA workout screen scrolled to the cool-down, the Mark Workout Complete button, and a "Why today" note explaining the Oura readiness score behind the plan',
-  },
-  {
-    src: '/media/screens/profile.webp',
-    caption: 'Your devices',
-    alt: 'SOMA profile screen: Apple Health and Oura connected, Whoop ready to connect, plus contact email and training experience settings',
-  },
+const SCREEN_SOURCES = [
+  { key: 'intro', src: '/media/screens/intro.webp' },
+  { key: 'onboarding', src: '/media/screens/onboarding.webp' },
+  { key: 'home', src: '/media/screens/home.webp' },
+  { key: 'readiness', src: '/media/screens/readiness.webp' },
+  { key: 'workout', src: '/media/screens/workout.webp' },
+  { key: 'complete', src: '/media/screens/complete.webp' },
+  { key: 'profile', src: '/media/screens/profile.webp' },
 ] as const;
 
-export const HeroDemo = () => (
-  <section id="hero-demo" className="py-24">
-    <Container className="flex flex-col items-center gap-6 text-center">
-      <Reveal className="flex flex-col items-center gap-6">
-        <Eyebrow>a first look at SOMA</Eyebrow>
-        <h2 className="ld-serif max-w-3xl text-4xl leading-tight font-medium md:text-5xl">
-          One read of your day. <em className="italic">One clear plan.</em>
-        </h2>
-      </Reveal>
-      <Reveal delay={120} className="w-full">
-        <div className="mx-auto max-w-6xl rounded-2xl bg-[var(--ld-surface)] px-6 py-8 md:px-12 md:py-10">
-          <ScreenGallery screens={SCREENS} />
-        </div>
-      </Reveal>
-    </Container>
-  </section>
-);
+export const HeroDemo = () => {
+  const t = useTranslations('heroDemo');
+  const screens: Screen[] = SCREEN_SOURCES.map(({ key, src }) => ({
+    src,
+    caption: t(`screens.${key}.caption`),
+    alt: t(`screens.${key}.alt`),
+  }));
+  return (
+    <section id="hero-demo" className="py-24">
+      <Container className="flex flex-col items-center gap-6 text-center">
+        <Reveal className="flex flex-col items-center gap-6">
+          <Eyebrow>{t('eyebrow')}</Eyebrow>
+          <h2 className="ld-serif max-w-3xl text-4xl leading-tight font-medium md:text-5xl">
+            {t.rich('h2', { em: (chunks) => <em className="italic">{chunks}</em> })}
+          </h2>
+        </Reveal>
+        <Reveal delay={120} className="w-full">
+          <div className="mx-auto max-w-6xl rounded-2xl bg-[var(--ld-surface)] px-6 py-8 md:px-12 md:py-10">
+            <ScreenGallery screens={screens} />
+          </div>
+        </Reveal>
+      </Container>
+    </section>
+  );
+};

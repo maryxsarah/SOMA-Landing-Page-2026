@@ -60,10 +60,13 @@ export const softwareApplicationRef = () => ({
   url: BASE_URL,
 });
 
-export const webPage = (opts: { url: string; name?: string }) => ({
+/** `url` should already be locale-prefixed (via `localizedPath`) when the
+ * page isn't English — this function only prepends `BASE_URL`. */
+export const webPage = (opts: { url: string; name?: string; locale?: string }) => ({
   '@type': 'WebPage',
   url: `${BASE_URL}${opts.url === '/' ? '' : opts.url}`,
   ...(opts.name ? { name: opts.name } : {}),
+  ...(opts.locale ? { inLanguage: opts.locale } : {}),
   isPartOf: { '@id': SITE_ID },
   mainEntity: { '@id': APP_ID },
   speakable: { '@type': 'SpeakableSpecification', cssSelector: ['h1', '[data-speakable]'] },

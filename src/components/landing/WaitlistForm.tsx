@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 import { cn } from '@/lib/cn';
 import { track } from '@/lib/analytics';
 
@@ -18,6 +19,7 @@ type Status = 'idle' | 'submitting' | 'success' | 'error';
  * gate, both checked client-side before ever contacting Kit.
  */
 export const WaitlistForm: React.FC<{ className?: string }> = ({ className }) => {
+  const t = useTranslations('waitlistForm');
   const pathname = usePathname();
   const [email, setEmail] = useState('');
   const [hp, setHp] = useState(''); // honeypot
@@ -70,7 +72,7 @@ export const WaitlistForm: React.FC<{ className?: string }> = ({ className }) =>
         tabIndex={-1}
         className={cn('text-lg text-[color:var(--ld-ink)]', className)}
       >
-        You’re on the list — the Reset Guide is on its way to your inbox.
+        {t('successMessage')}
       </p>
     );
   }
@@ -79,7 +81,7 @@ export const WaitlistForm: React.FC<{ className?: string }> = ({ className }) =>
     <form onSubmit={submit} className={cn('flex w-full max-w-md flex-col gap-3', className)}>
       <div className="flex gap-2">
         <label htmlFor="waitlist-email" className="sr-only">
-          Email address
+          {t('emailLabel')}
         </label>
         <input
           id="waitlist-email"
@@ -87,7 +89,7 @@ export const WaitlistForm: React.FC<{ className?: string }> = ({ className }) =>
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="you@example.com"
+          placeholder={t('emailPlaceholder')}
           aria-describedby={status === 'error' ? 'waitlist-error' : undefined}
           className="h-12 flex-1 rounded-full border border-[var(--ld-line-strong)] bg-[var(--ld-surface)] px-5 text-[color:var(--ld-ink)] placeholder:text-[color:var(--ld-text-3)] focus:border-[var(--ld-accent)] focus:outline-none"
         />
@@ -107,16 +109,16 @@ export const WaitlistForm: React.FC<{ className?: string }> = ({ className }) =>
           disabled={status === 'submitting'}
           className="h-12 rounded-full bg-[var(--ld-accent)] px-6 font-semibold text-white transition-transform hover:scale-[1.02] hover:bg-[var(--ld-accent-hover)] disabled:opacity-60"
         >
-          {status === 'submitting' ? 'Joining…' : 'Join'}
+          {status === 'submitting' ? t('joiningButton') : t('joinButton')}
         </button>
       </div>
       {status === 'error' && (
         <p id="waitlist-error" role="alert" className="text-sm text-[color:var(--ld-danger)]">
-          Something went wrong — check the email and try again.
+          {t('errorMessage')}
         </p>
       )}
       <p className="text-xs text-[color:var(--ld-text-3)]">
-        You’ll get the free Reset Guide right away, then launch updates — nothing else.{' '}
+        {t('disclaimer')}{' '}
         {/* TODO(brand): link the real privacy policy */}
       </p>
     </form>

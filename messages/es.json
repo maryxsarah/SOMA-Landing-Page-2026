@@ -1,0 +1,201 @@
+{
+  "nav": {
+    "features": "Funciones",
+    "howItWorks": "Cómo funciona",
+    "faq": "Preguntas frecuentes"
+  },
+  "common": {
+    "ctaLabelLive": "Empieza ahora",
+    "ctaLabelWaitlist": "Únete a la lista de espera",
+    "previousScreens": "Pantallas anteriores",
+    "nextScreens": "Pantallas siguientes",
+    "screenOf": "Pantalla {i} de {n}"
+  },
+  "hero": {
+    "eyebrow": "tu viaje de salud empieza ahora",
+    "h1": "Encuentra tu próximo <em>mejor día</em>.",
+    "lead": "El coach de salud para todos tus dispositivos, en tu bolsillo. Una sola app para tu salud, bienestar y longevidad."
+  },
+  "heroDemo": {
+    "eyebrow": "un primer vistazo a SOMA",
+    "h2": "Una lectura de tu día. <em>Un plan claro.</em>",
+    "screens": {
+      "intro": {
+        "caption": "Qué hace SOMA",
+        "alt": "Pantalla de introducción de SOMA: \"Encuentra tu próximo mejor día\", el flujo dispositivos → SOMA lo interpreta → plan diario claro, y un gráfico que muestra cómo la constancia se acumula a lo largo de seis meses"
+      },
+      "onboarding": {
+        "caption": "Configuración en un minuto",
+        "alt": "Pantalla de incorporación de SOMA: \"Una forma más simple de entrenar\", con un gráfico de barras que compara el progreso sin SOMA y con SOMA"
+      },
+      "home": {
+        "caption": "Tu semana de un vistazo",
+        "alt": "Pantalla de inicio de SOMA: los últimos siete días como anillos completos con el de hoy resaltado, y la preparación de hoy indicada como Moderada, con el entrenamiento de tren superior de 35 minutos completado debajo"
+      },
+      "readiness": {
+        "caption": "El plan de hoy",
+        "alt": "Detalle de preparación de SOMA: un objetivo de 7000–9000 pasos para hoy y una lista de entrenamientos que encajan con él, con la sesión de tren superior de 35 minutos seleccionada"
+      },
+      "workout": {
+        "caption": "El entrenamiento completo",
+        "alt": "Entrenamiento generado por IA de SOMA: bloques de calentamiento y fuerza con series, repeticiones, cargas exactas y cómo realizar cada ejercicio"
+      },
+      "complete": {
+        "caption": "Regístralo, y por qué",
+        "alt": "Pantalla de entrenamiento de SOMA desplazada hasta el enfriamiento, el botón Marcar entrenamiento como completado, y una nota \"Por qué hoy\" que explica la puntuación de preparación de Oura detrás del plan"
+      },
+      "profile": {
+        "caption": "Tus dispositivos",
+        "alt": "Pantalla de perfil de SOMA: Apple Health y Oura conectados, Whoop listo para conectar, además de ajustes de correo de contacto y experiencia de entrenamiento"
+      }
+    }
+  },
+  "marquee": {
+    "ariaLabel": "Patrones que SOMA interpreta",
+    "patterns": [
+      "Tu preparación dice que descanses. Tu calendario dice que sigas adelante.",
+      "Una puntuación de sueño “buena”, un entrenamiento terrible.",
+      "El plan no sabe en qué semana estás.",
+      "El antojo no es el problema.",
+      "Sentirte bien no es lo mismo que estar recuperado.",
+      "El café y el despertar a las 2 de la madrugada."
+    ]
+  },
+  "problem": {
+    "eyebrow": "SOMA es para ti, no para todos los demás",
+    "h2": "Tu <em>viaje</em> de bienestar personalizado está por comenzar.",
+    "lead": "Tu anillo conoce tu recuperación. Tu calendario conoce tu carga. Tu app de sueño conoce tus fases. Ninguno se comunica con los demás, y ninguno fue diseñado para hacerlo. Así que tú haces la traducción. Normalmente mal. Normalmente solo. Normalmente a las 6 de la mañana, con media taza de café encima y doce minutos antes de la primera reunión.",
+    "signals": [
+      { "a": "Puntuación de preparación baja", "b": "Calendario completamente lleno" },
+      { "a": "Puntuación de sueño alta", "b": "Entrenamiento pesado y sin energía" },
+      { "a": "Hoy “me siento genial”", "b": "HRV baja durante la noche" }
+    ],
+    "vs": "VS",
+    "quote": "“El número nunca te mintió. Simplemente no había terminado de hablar.”",
+    "quoteCaption": "— La Guía de Reinicio Basada en Datos"
+  },
+  "howItWorks": {
+    "eyebrow": "cómo funciona",
+    "h2": "Dos minutos, cada mañana, antes de la primera decisión real del día",
+    "steps": [
+      {
+        "title": "Conecta lo que ya tienes",
+        "body": "Tu anillo, tu wearable, tu CGM, Apple Health o cualquier otro dispositivo de salud que ya tengas. SOMA aprende quién eres y se vuelve más inteligente cada día."
+      },
+      {
+        "title": "Cuéntale a SOMA sobre tu día",
+        "body": "Una comida, un entrenamiento, cómo dormiste: escríbelo o dilo en voz alta. SOMA ajusta tu plan según cómo te sientes y lo que tu cuerpo indica."
+      },
+      {
+        "title": "Obtén un solo plan, no cuatro paneles",
+        "body": "Un plan claro, que ya te conoce a ti y a tu cuerpo. Cuando algo cambia, SOMA se pone en contacto contigo, en lugar de esperar a que se lo preguntes."
+      }
+    ]
+  },
+  "features": {
+    "eyebrow": "qué hace soma",
+    "h2": "Una sola pantalla de inicio para todo tu cuerpo",
+    "deviceChips": ["oura ring", "whoop", "apple health", "báscula inteligente", "CGM", "+ tus hábitos"],
+    "cards": [
+      {
+        "title": "Razona sobre todo a la vez",
+        "body": "Cada dispositivo genera su propia puntuación, en su propia app, sin ver las demás. SOMA es tu coach de salud personalizado que conecta todos los puntos y te da un plan claro, ¡todos los días!"
+      },
+      {
+        "title": "Independiente de marca por diseño",
+        "body": "Los fabricantes de dispositivos no pueden crear coaching sobre el hardware de un competidor; estructuralmente, no pueden. SOMA se sitúa por encima de la guerra del hardware: funciona con lo que tienes ahora y con lo que sea que uses después."
+      },
+      {
+        "title": "Se pone en contacto primero",
+        "body": "Cuando algo cambia lo suficiente como para importar, SOMA te escribe; no espera en una app a que te acuerdes de revisarla. Responde por voz o por texto, como lo harías con un coach."
+      },
+      {
+        "title": "Profundidad bajo demanda",
+        "body": "Más allá del plan diario: auditorías biométricas y resúmenes para tus visitas al médico cuando quieras profundizar; una lectura escrita de lo que tus datos han estado diciendo, lista para llevar a las conversaciones que importan."
+      }
+    ]
+  },
+  "founderNote": {
+    "eyebrow": "por qué existe soma",
+    "quote": "“Compré el anillo. Descargué las apps. Tenía más datos sobre mí misma de los que había tenido en toda mi vida, y aun así no sabía qué <em>hacer</em> realmente con todo eso. Hice la traducción a mano durante dos años. SOMA es la herramienta que siempre deseé que existiera.”",
+    "name": "Sarah-Maria Kollnitzer",
+    "title": "Fundadora y CEO — la primera y más exigente usuaria de SOMA",
+    "tagline": "Construyendo en público: una nueva nota de campo cada semana."
+  },
+  "faq": {
+    "eyebrow": "preguntas",
+    "h2": "Respondidas antes de que tuvieras que preguntar",
+    "items": [
+      {
+        "q": "¿Con qué dispositivos funciona SOMA?",
+        "a": "Anillos, bandas, básculas inteligentes y CGMs, conectados mediante APIs oficiales, con Apple Health como concentrador, además de una opción manual o por CSV como respaldo. SOMA es independiente de marca: funciona con los dispositivos que tienes ahora y con los que uses después."
+      },
+      {
+        "q": "¿Necesito comprar hardware nuevo?",
+        "a": "No. SOMA interpreta los wearables y los datos que ya tienes. Nada en SOMA requiere un dispositivo nuevo, una nueva suscripción a una app o una nueva compra: todo el objetivo es lograr que lo que ya tienes por fin se comunique entre sí."
+      },
+      {
+        "q": "¿Es SOMA un dispositivo médico?",
+        "a": "No. SOMA es una herramienta general de bienestar: te ayuda a interpretar tus propios datos y a planificar tu día. No diagnostica, no trata ni sustituye el consejo de un profesional clínico; para preguntas médicas, habla con tu médico."
+      },
+      {
+        "q": "¿Qué pasa después de unirme a la lista de espera?",
+        "a": "Recibes La Guía de Reinicio Basada en Datos en tu correo de inmediato: seis notas de campo sobre cómo interpretar los datos de tu wearable. Después, recibirás alguna nota de campo ocasional y actualizaciones sobre el lanzamiento. Los miembros de la lista de espera tienen acceso antes que nadie."
+      },
+      {
+        "q": "¿Qué es la Cohorte de Fundadores?",
+        "a": "Un pequeño nivel de acompañamiento personalizado para los primeros usuarios: incorporación práctica junto al equipo fundador, un programa premium de tres meses, y participación directa en lo que se construye. Los cupos son limitados y se ofrecen primero a la lista de espera."
+      }
+    ],
+    "availability": {
+      "q": "¿Está SOMA disponible hoy?",
+      "a": "SOMA aún no se ha lanzado. Al unirte a la lista de espera, recibes de inmediato La Guía de Reinicio Basada en Datos y acceso anticipado antes del lanzamiento público; el nivel de acompañamiento de la Cohorte de Fundadores se ofrece primero a la lista de espera."
+    }
+  },
+  "waitlistBand": {
+    "eyebrow": "empieza donde estás",
+    "h2": "Consigue <em>La Guía de Reinicio Basada en Datos</em>",
+    "lead": "Seis notas de campo sobre cómo convertir los datos que ya recopilas en mañanas más tranquilas y mejores: gratis, en tu correo hoy mismo. Al unirte, entras en la lista de espera de SOMA para tener acceso prioritario en el lanzamiento."
+  },
+  "waitlistForm": {
+    "emailLabel": "Correo electrónico",
+    "emailPlaceholder": "tu@ejemplo.com",
+    "joinButton": "Unirme",
+    "joiningButton": "Uniéndome…",
+    "successMessage": "Ya estás en la lista: la Guía de Reinicio va en camino a tu correo.",
+    "errorMessage": "Algo salió mal: revisa el correo e inténtalo de nuevo.",
+    "disclaimer": "Recibirás la Guía de Reinicio gratis de inmediato, y después actualizaciones sobre el lanzamiento: nada más."
+  },
+  "footer": {
+    "productTitle": "Producto",
+    "featuresLink": "Funciones",
+    "faqLink": "Preguntas frecuentes",
+    "featuresColumnTitle": "Funciones",
+    "howToColumnTitle": "Cómo hacerlo",
+    "useCasesColumnTitle": "Casos de uso",
+    "alternativesColumnTitle": "Alternativas",
+    "companyTitle": "Empresa",
+    "contactLink": "Contacto",
+    "investorsLink": "Inversores",
+    "legalTitle": "Legal",
+    "privacyLink": "Privacidad",
+    "termsLink": "Términos",
+    "copyright": "© {year} {parentName}. Todos los derechos reservados."
+  },
+  "legal": {
+    "lastUpdated": "Última actualización: {date}"
+  },
+  "spoke": {
+    "atAGlance": "De un vistazo",
+    "faqTitle": "Preguntas frecuentes"
+  },
+  "home": {
+    "metaDescription": "SOMA es un agente de salud con IA independiente de fabricante. Lee tu anillo, banda, báscula y CGM juntos y responde con un plan para hoy — no cuatro paneles.",
+    "jsonLdFeatures": [
+      "Un plan diario razonado a partir de todos tus dispositivos conectados",
+      "Funciona con anillos, bandas, básculas inteligentes y CGMs",
+      "Check-ins por chat o voz — escríbelo o dilo",
+      "Contacto proactivo cuando algo cambia lo suficiente como para importar"
+    ]
+  }
+}

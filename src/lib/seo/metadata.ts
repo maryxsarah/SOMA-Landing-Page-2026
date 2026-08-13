@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
-import { BASE_URL, BRAND } from './constants';
+import { routing, localizedPath, type Locale } from '@/i18n/routing';
+import { BASE_URL, BRAND, OG_LOCALE_MAP } from './constants';
 
 export type Archetype =
   | 'hub'
@@ -32,14 +33,27 @@ interface PageMetaOpts {
   title?: string;
   /** 110–170 chars. */
   description: string;
-  /** '/', '/features/x', … */
+  /** '/', '/features/x', … — unprefixed (English) path; locale below adds the prefix. */
   path: string;
+  /** Defaults to `routing.defaultLocale` (en) for call sites that haven't
+   * been made locale-aware yet — always pass the real one for a [locale] page. */
+  locale?: Locale;
   noindex?: boolean;
 }
 
 export function pageMetadata(opts: PageMetaOpts): Metadata {
+  const locale = opts.locale ?? routing.defaultLocale;
   const rawTitle = opts.title ?? archetypeTitles[opts.archetype](opts.subject ?? '');
-  const canonical = opts.path === '/' ? BASE_URL : `${BASE_URL}${opts.path}`;
+  const localizedPathValue = localizedPath(locale, opts.path);
+  const canonical =
+    localizedPathValue === '/' ? BASE_URL : `${BASE_URL}${localizedPathValue}`;
+  const languages = Object.fromEntries(
+    routing.locales.map((l) => {
+      const p = localizedPath(l, opts.path);
+      return [l, p === '/' ? BASE_URL : `${BASE_URL}${p}`];
+    }),
+  );
+  languages['x-default'] = opts.path === '/' ? BASE_URL : `${BASE_URL}${opts.path}`;
   return {
     // hub/howTo titles already carry the brand — bypass the layout `%s | Brand` template
     title:
@@ -47,11 +61,11 @@ export function pageMetadata(opts: PageMetaOpts): Metadata {
         ? { absolute: rawTitle }
         : rawTitle,
     description: opts.description,
-    alternates: { canonical },
+    alternates: { canonical, languages },
     openGraph: {
       type: 'website',
       siteName: BRAND.productFull,
-      locale: 'en_US',
+      locale: OG_LOCALE_MAP[locale] ?? OG_LOCALE_MAP[routing.defaultLocale],
       url: canonical,
       title: rawTitle,
       description: opts.description,

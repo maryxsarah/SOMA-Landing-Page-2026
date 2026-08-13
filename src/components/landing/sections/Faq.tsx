@@ -1,8 +1,12 @@
+import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import { Container } from '../Container';
 import { Eyebrow } from '../Eyebrow';
 import { Reveal } from '../Reveal';
 
-/** Single source for the FAQ — page.tsx builds the FAQPage JSON-LD from this. */
+/** Single source for the FAQ (English) — page.tsx builds the FAQPage JSON-LD
+ * from this; translated FAQ text comes from messages/{locale}.json `faq.items`
+ * via useFaqItems() below, keyed by the same index. */
 export const FAQ_ITEMS: { q: string; a: string }[] = [
   {
     q: 'Which devices does SOMA work with?',
@@ -26,27 +30,53 @@ export const FAQ_ITEMS: { q: string; a: string }[] = [
   },
 ];
 
-export const Faq = () => (
-  <section id="faq" className="border-t border-[var(--ld-line)] bg-[var(--ld-surface)] py-24">
-    <Container className="flex flex-col items-center">
-      <Reveal className="flex flex-col items-center gap-4 text-center">
-        <Eyebrow>questions</Eyebrow>
-        <h2 className="ld-serif text-4xl leading-tight font-medium">Asked before you had to</h2>
-      </Reveal>
-      <Reveal delay={100} className="mt-12 w-full max-w-3xl space-y-3">
-        {FAQ_ITEMS.map((item, i) => (
-          <details
-            key={item.q}
-            open={i === 0}
-            className="rounded-2xl border border-[var(--ld-line)] bg-[var(--ld-bg)] p-5"
-          >
-            <summary className="cursor-pointer font-bold">{item.q}</summary>
-            <p className="mt-3 text-[15px] leading-relaxed text-[color:var(--ld-text-2)]">
-              {item.a}
-            </p>
-          </details>
-        ))}
-      </Reveal>
-    </Container>
-  </section>
-);
+/** Shared by both the sync (`useFaqItems`) and async (`getFaqItems`) variants
+ * below — `t` is whichever translate function the caller's component type
+ * requires (next-intl forbids the sync `useTranslations` hook inside an
+ * `async` component). */
+function buildFaqItems(t: (key: string) => string): { q: string; a: string }[] {
+  return FAQ_ITEMS.map((_, i) => ({ q: t(`items.${i}.q`), a: t(`items.${i}.a`) }));
+}
+
+/** Locale-aware FAQ items, same order/count as FAQ_ITEMS (English source).
+ * Only call from a non-`async` component — see `getFaqItems` for `async` ones. */
+export function useFaqItems(): { q: string; a: string }[] {
+  const t = useTranslations('faq');
+  return buildFaqItems(t);
+}
+
+/** Same as `useFaqItems`, for `async` Server Components (e.g. a page's
+ * default export with `generateStaticParams`), which can't use the sync hook. */
+export async function getFaqItems(locale: string): Promise<{ q: string; a: string }[]> {
+  const t = await getTranslations({ locale, namespace: 'faq' });
+  return buildFaqItems(t);
+}
+
+export const Faq = () => {
+  const t = useTranslations('faq');
+  const items = useFaqItems();
+  return (
+    <section id="faq" className="border-t border-[var(--ld-line)] bg-[var(--ld-surface)] py-24">
+      <Container className="flex flex-col items-center">
+        <Reveal className="flex flex-col items-center gap-4 text-center">
+          <Eyebrow>{t('eyebrow')}</Eyebrow>
+          <h2 className="ld-serif text-4xl leading-tight font-medium">{t('h2')}</h2>
+        </Reveal>
+        <Reveal delay={100} className="mt-12 w-full max-w-3xl space-y-3">
+          {items.map((item, i) => (
+            <details
+              key={item.q}
+              open={i === 0}
+              className="rounded-2xl border border-[var(--ld-line)] bg-[var(--ld-bg)] p-5"
+            >
+              <summary className="cursor-pointer font-bold">{item.q}</summary>
+              <p className="mt-3 text-[15px] leading-relaxed text-[color:var(--ld-text-2)]">
+                {item.a}
+              </p>
+            </details>
+          ))}
+        </Reveal>
+      </Container>
+    </section>
+  );
+};
