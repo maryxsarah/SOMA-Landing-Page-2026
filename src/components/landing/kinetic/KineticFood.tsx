@@ -97,7 +97,7 @@ export const KineticFood = () => {
             </div>
             <div
               data-px="0.16"
-              className="absolute right-0 bottom-[-22px] z-[4] w-[138px] animate-[k7DriftB_9s_ease-in-out_infinite]"
+              className="absolute -right-[24px] -bottom-[72px] z-[4] w-[110px] animate-[k7DriftB_9s_ease-in-out_infinite]"
               style={{ '--rot': '7deg' } as React.CSSProperties}
             >
               <LocalImage
