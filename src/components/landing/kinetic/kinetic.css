@@ -1,0 +1,159 @@
+/* Kinetic v7 homepage scope. Deliberately separate from `.ld-theme` (the
+   light "vapor" tokens Footer/WaitlistForm still use) — `.ld-kinetic` layers
+   its own dark tokens on top without touching those, so the shared Footer
+   at the bottom of the page keeps rendering in the light palette on
+   purpose (see LandingPage.tsx). */
+
+.ld-kinetic {
+  --k-bg: #0c0a16;
+  --k-ink: #f3f4fa;
+  --k-ink-soft: rgba(255, 255, 255, 0.68);
+  --k-ink-faint: rgba(255, 255, 255, 0.44);
+  --k-accent: #8faef8;
+  --k-accent-soft: #b9c9fb;
+  --k-accent-2: #c6d6fd;
+  --k-accent-deep: #5a7df5;
+  --k-mint: #8fd3b4;
+  --k-shadow: rgba(5, 8, 30, 0.55);
+
+  background: var(--k-bg);
+  color: var(--k-ink);
+  font-family: var(--font-kinetic-body), 'Instrument Sans', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.ld-kinetic a {
+  color: var(--k-accent);
+  text-decoration: none;
+}
+.ld-kinetic a:hover {
+  color: var(--k-accent-2);
+}
+
+.k7-serif {
+  font-family: var(--font-kinetic-display), 'Playfair Display', serif;
+}
+
+@keyframes k7In {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes k7Drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(var(--rot, 0deg));
+  }
+  50% {
+    transform: translate3d(0, -13px, 0) rotate(var(--rot, 0deg));
+  }
+}
+@keyframes k7DriftB {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(var(--rot, 0deg));
+  }
+  50% {
+    transform: translate3d(9px, -8px, 0) rotate(var(--rot, 0deg));
+  }
+}
+@keyframes k7Marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes k7MarqueeRev {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes k7Pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.4);
+  }
+}
+@keyframes k7Sheen {
+  0% {
+    transform: translateX(-150%) skewX(-16deg);
+  }
+  60%,
+  100% {
+    transform: translateX(250%) skewX(-16deg);
+  }
+}
+
+/* Scroll-reveal — KineticEffects sets [data-js="on"] on this wrapper after
+   mount, then flips [data-shown] per element via IntersectionObserver. No
+   JS / no [data-js] attribute → nothing here ever hides content. */
+.ld-kinetic [data-r] {
+  transition:
+    opacity 0.95s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.95s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.ld-kinetic[data-js='on'] [data-r]:not([data-shown]) {
+  opacity: 0;
+}
+.ld-kinetic[data-js='on'] [data-r][data-from='up']:not([data-shown]) {
+  transform: translateY(40px);
+}
+.ld-kinetic[data-js='on'] [data-r][data-from='left']:not([data-shown]) {
+  transform: translateX(-40px);
+}
+.ld-kinetic[data-js='on'] [data-r][data-from='right']:not([data-shown]) {
+  transform: translateX(40px);
+}
+.ld-kinetic[data-js='on'] [data-r][data-from='scale']:not([data-shown]) {
+  transform: scale(0.93);
+}
+.ld-kinetic[data-js='on'] [data-r][data-d='1']:not([data-shown]) {
+  transition-delay: 0.08s;
+}
+.ld-kinetic[data-js='on'] [data-r][data-d='2']:not([data-shown]) {
+  transition-delay: 0.16s;
+}
+.ld-kinetic[data-js='on'] [data-r][data-d='3']:not([data-shown]) {
+  transition-delay: 0.24s;
+}
+.ld-kinetic[data-js='on'] [data-r][data-d='4']:not([data-shown]) {
+  transition-delay: 0.32s;
+}
+
+.ld-kinetic [data-magnet] {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ld-kinetic [data-bar] > i {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  width: 0;
+  transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.15s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ld-kinetic *,
+  .ld-kinetic *::before,
+  .ld-kinetic *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .ld-kinetic[data-js='on'] [data-r]:not([data-shown]) {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

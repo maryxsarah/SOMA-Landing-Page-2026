@@ -21,7 +21,16 @@ import { routing } from '@/i18n/routing';
  */
 
 const SPOKE_BUCKET_RE = /^\/(features|for|how-to|alternatives|compare)\/([^/]+?)(\.md)?$/;
-const PUBLIC_PATHS = ['/robots.txt', '/sitemap.xml', '/llms.txt', '/opengraph-image'];
+const PUBLIC_PATHS = [
+  '/robots.txt',
+  '/sitemap.xml',
+  '/llms.txt',
+  '/opengraph-image',
+  // AASA + friends: locale-rewriting (or auth-gating) /.well-known/
+  // 404s apple-app-site-association and silently kills the app's
+  // universal links (email-confirmation deep link regression).
+  '/.well-known',
+];
 const NOINDEX_ROUTES = ['/auth', '/dashboard', '/editor'];
 
 const intlMiddleware = createIntlMiddleware(routing);
@@ -88,11 +97,11 @@ export function proxy(req: NextRequest) {
 }
 
 export const config = {
-  // Excludes _next/static, _next/image, favicon and /landing, /media
-  // assets: the image optimizer's internal self-fetch carries no auth
+  // Excludes _next/static, _next/image, favicon and /landing, /media,
+  // /assets: the image optimizer's internal self-fetch carries no auth
   // header on a gated deploy, and — separately — any public/ static file
   // that reaches next-intl's middleware gets rewritten to a locale-prefixed
   // path that doesn't exist (e.g. /media/x.webp -> /en/media/x.webp, 404),
   // since these live at the true root, not under app/[locale].
-  matcher: ['/((?!_next/static|_next/image|favicon.ico|landing/|media/).*)'],
+  matcher: ['/((?!_next/static|_next/image|favicon.ico|landing/|media/|assets/).*)'],
 };

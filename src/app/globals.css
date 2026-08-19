@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import '../components/landing/landing.css';
+@import '../components/landing/kinetic/kinetic.css';
 
 :root {
   --background: #f6f7f7; /* vapor-10 */

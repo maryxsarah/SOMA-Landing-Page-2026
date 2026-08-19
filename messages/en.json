@@ -166,6 +166,106 @@
     "errorMessage": "Something went wrong — check the email and try again.",
     "disclaimer": "You’ll get the free Reset Guide right away, then launch updates — nothing else."
   },
+  "kinetic": {
+    "nav": {
+      "inside": "Inside",
+      "food": "Food",
+      "pricing": "Pricing"
+    },
+    "hero": {
+      "badge": "Invite-only beta · iPhone · iOS 17+",
+      "h1Line1": "Your body,",
+      "h1Line2": "finally decoded.",
+      "lead": "A fitness agent and a nutrition agent read the data already on your iPhone and hand you one plan a day — the session, the food, the reason why.",
+      "trialLine": "Free {days}-day trial · cancel any time",
+      "devices": {
+        "appleHealth": "Apple Health",
+        "oura": "Oura",
+        "appleWatch": "Apple Watch",
+        "whoop": "Whoop"
+      }
+    },
+    "band": {
+      "words": [
+        "Cook",
+        "Practice by plan",
+        "Use trackers",
+        "Recover",
+        "Decided for you",
+        "Made for her",
+        "Eat well",
+        "Move outside"
+      ]
+    },
+    "grid": {
+      "eyebrow": "What's inside",
+      "h2": "Everything her plan needs, nothing it doesn't.",
+      "daily": {
+        "label": "Daily decision",
+        "h3": "One card. One answer.",
+        "body": "Moderate today, 40 minutes, because Apple Health says she is still recovering. Every recommendation carries its reason."
+      },
+      "widgets": {
+        "label": "Her widgets",
+        "h3": "She picks what her home screen shows",
+        "body": "Water, sleep, mood, sport goal — on or off, applied instantly."
+      },
+      "recovery": {
+        "label": "Recovery-aware",
+        "unit": "h",
+        "body": "Sleep read from Apple Health — deep 2.4, REM 1.2 — and the session sized to it."
+      },
+      "gymScan": {
+        "label": "Gym scan",
+        "h3": "Photograph the room",
+        "body": "The session rebuilds around the equipment that is really there."
+      },
+      "proof": {
+        "label": "Proof",
+        "h3": "Evidence, not a streak.",
+        "body": "Goal photo against current photo, week by week — private to her account, and the plan adapts to what is actually changing."
+      },
+      "affirmation": {
+        "label": "Affirmation",
+        "quote": "A kind line, new each morning — generated from the same signals as her plan.",
+        "caption": "New features ship weekly"
+      }
+    },
+    "food": {
+      "label": "Food",
+      "h2Line1": "\"What can I make?\"",
+      "h2Line2": "Answered from her fridge.",
+      "lead": "She names what she has. Soma returns one full recipe sized to the calories and macros left today, shows how it fits before she commits, walks her through it step by step, then logs it.",
+      "macros": {
+        "calories": { "label": "Calories", "value": "517 / 1 701 kcal" },
+        "protein": { "label": "Protein", "value": "52 / 134 g" },
+        "carbsFat": { "label": "Carbs · fat", "value": "52 / 186 g · 12 / 47 g" }
+      }
+    },
+    "start": {
+      "h2": "Find your next best day.",
+      "priceLine": "Free {days}-day trial, then $19.99/month — or $13.33/month billed annually. One subscription, no hardware.",
+      "disclaimer": "Cancel any time · iPhone only, Android on the roadmap",
+      "devices": {
+        "health": "Health",
+        "watch": "Watch",
+        "oura": "Oura",
+        "whoop": "Whoop"
+      },
+      "trackers": ["Garmin", "Fitbit", "Polar", "Samsung Health", "Withings", "Strava"],
+      "trackersMore": "+ more coming",
+      "stats": [
+        { "value": "180", "suffix": "+", "caption": "TestFlight sessions before paid" },
+        { "value": "30", "suffix": "+", "caption": "customer interviews" },
+        { "value": "700", "suffix": "M+", "caption": "already carry the sensor" },
+        { "value": "2", "suffix": "", "caption": "agents, one answer" }
+      ]
+    },
+    "satellites": {
+      "eyebrow": "Explore Soma",
+      "caption": "Same shell, one intent per URL"
+    }
+  },
   "footer": {
     "productTitle": "Product",
     "featuresLink": "Features",

@@ -1,16 +1,8 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { pageMetadata } from '@/lib/seo/metadata';
-import {
-  faqPage,
-  jsonLdString,
-  organization,
-  softwareApplication,
-  webPage,
-  webSite,
-} from '@/lib/seo/jsonLd';
+import { jsonLdString, organization, softwareApplication, webPage, webSite } from '@/lib/seo/jsonLd';
 import { LandingPage } from '@/components/landing/LandingPage';
-import { getFaqItems } from '@/components/landing/sections/Faq';
 import { routing, localizedPath, type Locale } from '@/i18n/routing';
 
 export function generateStaticParams() {
@@ -36,14 +28,12 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'home' });
-  const faqItems = await getFaqItems(locale);
   const ld = [
     organization(),
     webSite(),
     // TODO(brand): add offers once public pricing is final.
     softwareApplication({ featureList: t.raw('jsonLdFeatures') as string[] }),
     webPage({ url: localizedPath(locale, '/'), locale }),
-    faqPage(faqItems),
   ];
   return (
     <>

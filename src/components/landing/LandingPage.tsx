@@ -1,45 +1,32 @@
-import { StickyNav } from './StickyNav';
+import { cn } from '@/lib/cn';
 import { Footer } from './Footer';
-import { Hero } from './sections/Hero';
-import { HeroDemo } from './sections/HeroDemo';
-import { MarqueeStrip } from './sections/MarqueeStrip';
-import { Problem } from './sections/Problem';
-import { HowItWorks } from './sections/HowItWorks';
-import { Features } from './sections/Features';
-import { FounderNote } from './sections/FounderNote';
-import { Faq } from './sections/Faq';
-import { WaitlistBand } from './sections/WaitlistBand';
+import { kineticFontVariables } from './kinetic/fonts';
+import { KineticEffects } from './kinetic/KineticEffects';
+import { KineticHero } from './kinetic/KineticHero';
+import { KineticMarqueeBand } from './kinetic/KineticMarqueeBand';
+import { KineticBentoGrid } from './kinetic/KineticBentoGrid';
+import { KineticFood } from './kinetic/KineticFood';
+import { KineticStart } from './kinetic/KineticStart';
+import { KineticSatellites } from './kinetic/KineticSatellites';
 
 /**
- * Section composer — stacks small section components, no logic here.
- *
- * Full proven narrative order (add sections as content lands, one file each
- * in ./sections, ≤250 lines):
- *   Hero → HeroDemo → SocialProof → MarqueeStrip → FeaturesBento → Problem →
- *   HowItWorks → feature deep-dives → Trust/objection → SeeItInAction →
- *   WhoItsFor → Ecosystem → CtaSection → PricingSection → Faq →
- *   WaitlistBand/ReadyBand → Footer
- *
- * Nav anchors expect sections with id="features", id="how-it-works", id="faq"
- * to exist once those sections are built. Pricing section is pulled for now
- * (see ./sections/Pricing.tsx — not deleted, just unmounted) — re-add the
- * import and `<Pricing />` here, plus the nav/footer links, when it's back.
+ * Kinetic v7 homepage. `.ld-kinetic` layers dark tokens for everything above
+ * the footer; the outer `.ld-theme` wrapper is kept so <Footer/> (and the
+ * `.ld-theme`-scoped WaitlistForm inside KineticStart) still render in the
+ * site's light "vapor" palette — deliberate, see kinetic.css.
  */
 export const LandingPage = () => (
   <div className="ld-theme min-h-screen">
-    {/* Nav lives OUTSIDE the zoomed <main> — sticky drifts inside CSS zoom. */}
-    <StickyNav />
-    <main className="ld">
-      <Hero />
-      <HeroDemo />
-      <MarqueeStrip />
-      <Problem />
-      <HowItWorks />
-      <Features />
-      <FounderNote />
-      <Faq />
-      <WaitlistBand />
-      <Footer />
-    </main>
+    <div className={cn('ld-kinetic bg-[color:var(--k-bg)]', kineticFontVariables)}>
+      <KineticHero />
+      <KineticMarqueeBand />
+      <KineticBentoGrid />
+      <KineticFood />
+      <KineticStart />
+      <KineticSatellites />
+      <div className="h-[76px]" />
+      <KineticEffects />
+    </div>
+    <Footer />
   </div>
 );
