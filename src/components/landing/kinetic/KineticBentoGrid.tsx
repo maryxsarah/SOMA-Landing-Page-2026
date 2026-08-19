@@ -110,8 +110,15 @@ export const KineticBentoGrid = () => {
           <p className="mb-[18px] text-[13.5px] leading-[1.55] text-white/62">{t('grid.gymScan.body')}</p>
           <div className="flex justify-center">
             <div className="w-[170px] rounded-t-[28px] bg-[linear-gradient(160deg,#2B2B33,#0E0E14)] px-1.5 pt-1.5 shadow-[0_-2px_40px_rgba(5,8,30,0.5)]">
-              {/* Placeholder — the design-project export for this screen was truncated on fetch; swap for a real screenshot when available. */}
-              <div className="aspect-[594/1200] w-full rounded-t-[23px] bg-[linear-gradient(165deg,#EDF3FC,#D7E3F5)]" />
+              <div className="overflow-hidden rounded-t-[23px] bg-[#EDF3FC]">
+                <LocalImage
+                  src="/assets/kinetic/site/screen-gymscan.png"
+                  alt="Session rebuilt from the equipment in the room"
+                  width={600}
+                  height={1280}
+                  className="h-auto w-full"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -125,8 +132,15 @@ export const KineticBentoGrid = () => {
         >
           <div className="grid grid-cols-[168px_1fr] items-center gap-6">
             <div className="rounded-[28px] bg-[linear-gradient(160deg,#2B2B33,#0E0E14)] p-1.5 shadow-[0_20px_40px_rgba(5,8,30,0.55)]">
-              {/* Placeholder — the design-project export for this screen was truncated on fetch; swap for a real screenshot when available. */}
-              <div className="aspect-[594/1200] w-full rounded-[23px] bg-[linear-gradient(165deg,#EDF3FC,#D7E3F5)]" />
+              <div className="overflow-hidden rounded-[23px] bg-[#EDF3FC]">
+                <LocalImage
+                  src="/assets/kinetic/site/screen-compare.png"
+                  alt="Goal photo against current photo"
+                  width={600}
+                  height={1280}
+                  className="h-auto w-full"
+                />
+              </div>
             </div>
             <div>
               <div className="mb-3 text-[11.5px] font-semibold tracking-[1px] text-[color:var(--k-accent)] uppercase">

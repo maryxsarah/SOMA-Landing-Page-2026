@@ -12,10 +12,50 @@ const NAV_LINKS = [
 ] as const;
 
 const DEVICE_CHIPS = [
-  { key: 'appleHealth', img: 'dev-health', top: 88, offset: -472, rot: -8, drift: 'k7Drift', dur: '9s', px: '0.16' },
-  { key: 'oura', img: 'dev-oura', top: 286, offset: -408, rot: 6, drift: 'k7DriftB', dur: '11s', px: '0.24' },
-  { key: 'appleWatch', img: 'dev-watch', top: 110, offset: 342, rot: 7, drift: 'k7Drift', dur: '10s', px: '0.2' },
-  { key: 'whoop', img: 'dev-whoop', top: 300, offset: 376, rot: -6, drift: 'k7DriftB', dur: '12s', px: '0.28' },
+  {
+    key: 'appleHealth',
+    img: 'dev-health',
+    dims: [699, 699],
+    top: 88,
+    offset: -472,
+    rot: -8,
+    drift: 'k7Drift',
+    dur: '9s',
+    px: '0.16',
+  },
+  {
+    key: 'oura',
+    img: 'dev-oura',
+    dims: [405, 350],
+    top: 286,
+    offset: -408,
+    rot: 6,
+    drift: 'k7DriftB',
+    dur: '11s',
+    px: '0.24',
+  },
+  {
+    key: 'appleWatch',
+    img: 'dev-watch',
+    dims: [654, 554],
+    top: 110,
+    offset: 342,
+    rot: 7,
+    drift: 'k7Drift',
+    dur: '10s',
+    px: '0.2',
+  },
+  {
+    key: 'whoop',
+    img: 'dev-whoop',
+    dims: [359, 405],
+    top: 300,
+    offset: 376,
+    rot: -6,
+    drift: 'k7DriftB',
+    dur: '12s',
+    px: '0.28',
+  },
 ] as const;
 
 /**
@@ -78,8 +118,8 @@ export const KineticHero = () => {
               <LocalImage
                 src="/assets/kinetic/site/appstore-badge.png"
                 alt="Download on the App Store"
-                width={600}
-                height={178}
+                width={1200}
+                height={357}
                 className="h-[42px] w-auto"
               />
             </CtaButton>
@@ -108,8 +148,8 @@ export const KineticHero = () => {
                 <LocalImage
                   src={`/assets/kinetic/site/${chip.img}.png`}
                   alt=""
-                  width={64}
-                  height={64}
+                  width={chip.dims[0]}
+                  height={chip.dims[1]}
                   className="h-[26px] w-[26px] object-contain"
                 />
                 <span className="text-[12.5px] font-semibold text-white/86">{t(`hero.devices.${chip.key}`)}</span>
@@ -148,8 +188,8 @@ export const KineticHero = () => {
             <LocalImage
               src="/assets/kinetic/site/appstore-badge.png"
               alt="Download on the App Store"
-              width={600}
-              height={178}
+              width={1200}
+              height={357}
               className="h-14 w-auto drop-shadow-[0_14px_30px_rgba(5,8,30,0.6)]"
             />
           </CtaButton>
@@ -169,8 +209,8 @@ export const KineticHero = () => {
               <LocalImage
                 src="/assets/kinetic/site/her-mirror2.png"
                 alt=""
-                width={444}
-                height={800}
+                width={667}
+                height={1200}
                 className="h-[206px] w-full object-cover object-[50%_16%]"
               />
             </div>
@@ -183,8 +223,8 @@ export const KineticHero = () => {
             <LocalImage
               src="/assets/kinetic/site/food-bowl.png"
               alt=""
-              width={580}
-              height={600}
+              width={1094}
+              height={1134}
               className="h-auto w-full drop-shadow-[0_18px_32px_rgba(5,8,30,0.5)]"
             />
           </div>
@@ -197,8 +237,8 @@ export const KineticHero = () => {
               <LocalImage
                 src="/assets/kinetic/site/life-hike.png"
                 alt=""
-                width={433}
-                height={800}
+                width={650}
+                height={1200}
                 className="h-[212px] w-full object-cover"
               />
             </div>
@@ -211,8 +251,8 @@ export const KineticHero = () => {
             <LocalImage
               src="/assets/kinetic/site/food-berries.png"
               alt=""
-              width={571}
-              height={600}
+              width={1143}
+              height={1200}
               className="h-auto w-full drop-shadow-[0_16px_30px_rgba(5,8,30,0.5)]"
             />
           </div>

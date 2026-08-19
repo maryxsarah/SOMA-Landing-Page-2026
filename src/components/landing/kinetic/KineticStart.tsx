@@ -6,10 +6,10 @@ import { WaitlistForm } from '../WaitlistForm';
 import { KINETIC_TRIAL_DAYS } from './constants';
 
 const DEVICE_ICONS = [
-  { key: 'health', img: 'dev-health', dims: [2097, 2097], size: 34 },
-  { key: 'watch', img: 'dev-watch', dims: [1962, 1662], size: 36 },
-  { key: 'oura', img: 'dev-oura', dims: [1212, 1050], size: 34 },
-  { key: 'whoop', img: 'dev-whoop', dims: [1074, 1215], size: 36 },
+  { key: 'health', img: 'dev-health', dims: [699, 699], size: 34 },
+  { key: 'watch', img: 'dev-watch', dims: [654, 554], size: 36 },
+  { key: 'oura', img: 'dev-oura', dims: [405, 350], size: 34 },
+  { key: 'whoop', img: 'dev-whoop', dims: [359, 405], size: 36 },
 ] as const;
 
 const TRACKER_PILLS = ['Garmin', 'Fitbit', 'Polar', 'Samsung Health', 'Withings', 'Strava'];
@@ -43,8 +43,8 @@ export const KineticStart = () => {
                 <LocalImage
                   src="/assets/kinetic/site/appstore-badge.png"
                   alt="Download on the App Store"
-                  width={600}
-                  height={178}
+                  width={1200}
+                  height={357}
                   className="h-[50px] w-auto"
                 />
               </CtaButton>

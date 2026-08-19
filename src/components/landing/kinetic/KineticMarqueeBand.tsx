@@ -5,14 +5,14 @@ const CUTOUT = 'max-h-[76%] max-w-[74%] h-auto w-auto';
 const COVER = 'h-full w-full object-cover';
 
 const WORD_IMAGES = [
-  { img: 'food-bowl', dims: [580, 600], style: CUTOUT },
-  { img: 'life-dumbbell', dims: [433, 800], style: COVER },
-  { img: 'dev-oura', dims: [1212, 1050], style: CUTOUT },
-  { img: 'life-beach', dims: [433, 800], style: COVER },
-  { img: 'dev-health', dims: [2097, 2097], style: CUTOUT },
-  { img: 'her-portrait', dims: [808, 900], style: COVER },
-  { img: 'food-berries', dims: [571, 600], style: CUTOUT },
-  { img: 'life-hike', dims: [433, 800], style: COVER },
+  { img: '/assets/kinetic/site/food-bowl.png', dims: [1094, 1134], style: CUTOUT },
+  { img: '/assets/kinetic/site/life-dumbbell.png', dims: [1200, 832], style: COVER },
+  { img: '/assets/kinetic/site/dev-oura.png', dims: [405, 350], style: CUTOUT },
+  { img: '/assets/kinetic/site/life-beach.png', dims: [650, 1200], style: COVER },
+  { img: '/assets/kinetic/site/dev-health.png', dims: [699, 699], style: CUTOUT },
+  { img: '/assets/kinetic/site/her-portrait.png', dims: [1075, 1200], style: COVER },
+  { img: '/assets/kinetic/site/food-berries.png', dims: [1143, 1200], style: CUTOUT },
+  { img: '/assets/kinetic/site/life-hike.png', dims: [650, 1200], style: COVER },
 ] as const;
 
 /** Pure-CSS marquee of the pattern words, each with a small icon or photo. */
@@ -31,7 +31,7 @@ export const KineticMarqueeBand = () => {
                 <span key={`${copy}-${word}`} className="flex shrink-0 items-center gap-[14px] whitespace-nowrap">
                   <span className="flex h-[40px] w-[40px] shrink-0 items-center justify-center overflow-hidden rounded-xl bg-white/7 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.14)]">
                     <LocalImage
-                      src={`/assets/kinetic/site/${asset.img}.png`}
+                      src={asset.img}
                       alt=""
                       width={asset.dims[0]}
                       height={asset.dims[1]}
