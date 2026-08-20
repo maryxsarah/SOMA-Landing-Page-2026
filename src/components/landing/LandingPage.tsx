@@ -7,7 +7,6 @@ import { KineticMarqueeBand } from './kinetic/KineticMarqueeBand';
 import { KineticBentoGrid } from './kinetic/KineticBentoGrid';
 import { KineticFood } from './kinetic/KineticFood';
 import { KineticStart } from './kinetic/KineticStart';
-import { KineticSatellites } from './kinetic/KineticSatellites';
 
 /**
  * Kinetic v7 homepage. `.ld-kinetic` layers dark tokens for everything above
@@ -23,7 +22,6 @@ export const LandingPage = () => (
       <KineticBentoGrid />
       <KineticFood />
       <KineticStart />
-      <KineticSatellites />
       <div className="h-[76px]" />
       <KineticEffects />
     </div>

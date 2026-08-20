@@ -216,16 +216,16 @@
   },
   "kinetic": {
     "nav": {
-      "inside": "Inside",
-      "food": "Food",
-      "pricing": "Pricing"
+      "inside": "Унутра",
+      "food": "Храна",
+      "pricing": "Цене"
     },
     "hero": {
-      "badge": "Invite-only beta · iPhone · iOS 17+",
-      "h1Line1": "Your body,",
-      "h1Line2": "finally decoded.",
-      "lead": "A fitness agent and a nutrition agent read the data already on your iPhone and hand you one plan a day — the session, the food, the reason why.",
-      "trialLine": "Free {days}-day trial on the yearly plan",
+      "badge": "Бета само на позив · iPhone · iOS 17+",
+      "h1Line1": "Твоје тело,",
+      "h1Line2": "коначно дешифровано.",
+      "lead": "Агент за фитнес и агент за исхрану читају податке који већ постоје на твом iPhone-у и сваког дана ти дају један план — тренинг, храну и разлог зашто.",
+      "trialLine": "Бесплатна {days}-дневна пробна верзија уз годишњи план",
       "devices": {
         "appleHealth": "Apple Health",
         "oura": "Oura",
@@ -234,80 +234,80 @@
       }
     },
     "cta": {
-      "appStoreAlt": "Download on the App Store",
-      "getGuide": "Get the free Reset Guide",
-      "guideCaption": "Six field notes on reading your data — free, sent the moment you join below."
+      "appStoreAlt": "Преузми са App Store-а",
+      "getGuide": "Преузми бесплатни водич за ресетовање",
+      "guideCaption": "Шест кратких белешки о томе како да читаш своје податке — бесплатно, стижу чим се пријавиш испод."
     },
     "band": {
       "words": [
-        "Cook",
-        "Practice by plan",
-        "Use trackers",
-        "Recover",
-        "Decided for you",
-        "Made for her",
-        "Eat well",
-        "Move outside"
+        "Кувај",
+        "Тренирај по плану",
+        "Користи трекере",
+        "Опорави се",
+        "Одлучено за тебе",
+        "Направљено за њу",
+        "Једи здраво",
+        "Крећи се напољу"
       ]
     },
     "grid": {
-      "eyebrow": "What's inside",
-      "h2": "Everything her plan needs, nothing it doesn't.",
+      "eyebrow": "Шта је унутра",
+      "h2": "Све што њен план захтева. Ништа сувишно.",
       "daily": {
-        "label": "Daily decision",
-        "h3": "One card. One answer.",
-        "body": "Moderate today, 40 minutes, because Apple Health says she is still recovering. Every recommendation carries its reason."
+        "label": "Дневна одлука",
+        "h3": "Једна картица. Један одговор.",
+        "body": "Данас умерено, 40 минута, јер Apple Health каже да се још опоравља. Свака препорука носи свој разлог."
       },
       "widgets": {
-        "label": "Her widgets",
-        "h3": "She picks what her home screen shows",
-        "body": "Water, sleep, mood, sport goal — on or off, applied instantly."
+        "label": "Њени виџети",
+        "h3": "Она бира шта приказује њен почетни екран",
+        "body": "Вода, сан, расположење, спортски циљ — укључено или искључено, примењено тренутно."
       },
       "recovery": {
-        "label": "Recovery-aware",
+        "label": "Прилагођено опоравку",
         "unit": "h",
-        "body": "Sleep read from Apple Health — deep 2.4, REM 1.2 — and the session sized to it."
+        "body": "Сан очитан из Apple Health — дубоки 2.4, REM 1.2 — и тренинг прилагођен томе."
       },
       "gymScan": {
-        "label": "Gym scan",
-        "h3": "Photograph the room",
-        "body": "The session rebuilds around the equipment that is really there."
+        "label": "Скенирање теретане",
+        "h3": "Фотографиши просторију",
+        "body": "Тренинг се изнова осмишљава према опреми која заиста постоји ту."
       },
       "proof": {
-        "label": "Proof",
-        "h3": "Evidence, not a streak.",
-        "body": "Goal photo against current photo, week by week — private to her account, and the plan adapts to what is actually changing."
+        "label": "Доказ",
+        "h3": "Докази, не низ дана.",
+        "body": "Циљна фотографија наспрам тренутне, недељу за недељом — видљиво само на њеном налогу, а план се прилагођава ономе што се заиста мења."
       },
       "affirmation": {
-        "label": "Affirmation",
-        "quote": "A kind line, new each morning — generated from the same signals as her plan.",
-        "caption": "New features ship weekly"
+        "label": "Афирмација",
+        "quote": "Топла реченица, нова свако јутро — генерисана из истих сигнала као и њен план.",
+        "caption": "Нове функције стижу сваке недеље"
       }
     },
     "food": {
-      "label": "Food",
-      "h2Line1": "\"What can I make?\"",
-      "h2Line2": "Answered from her fridge.",
-      "lead": "She names what she has. Soma returns one full recipe sized to the calories and macros left today, shows how it fits before she commits, walks her through it step by step, then logs it.",
+      "label": "Храна",
+      "h2Line1": "„Шта могу да направим?“",
+      "h2Line2": "Одговор из њеног фрижидера.",
+      "lead": "Она наведе шта има. SOMA враћа један потпун рецепт прилагођен калоријама и макронутријентима који су јој остали за данас, показује како се уклапа пре него што се определи, води је корак по корак, а онда то бележи.",
       "macros": {
         "calories": {
-          "label": "Calories",
+          "label": "Калорије",
           "value": "517 / 1 701 kcal"
         },
         "protein": {
-          "label": "Protein",
+          "label": "Протеини",
           "value": "52 / 134 g"
         },
         "carbsFat": {
-          "label": "Carbs · fat",
+          "label": "Угљени хидрати · масти",
           "value": "52 / 186 g · 12 / 47 g"
         }
       }
     },
     "start": {
-      "h2": "Find your next best day.",
-      "priceLine": "$13.33/month billed annually ($159.99/year) after a free {days}-day trial — or $19.99/month, no trial. One subscription, no hardware.",
-      "disclaimer": "Cancel any time · iPhone only, Android on the roadmap",
+      "h2": "Пронађи свој следећи најбољи дан.",
+      "priceLine": "$13.33/месечно, наплата на годишњем нивоу ($159.99/годишње) након бесплатне {days}-дневне пробне верзије — или $19.99/месечно, без пробне верзије. Једна претплата, без хардвера.",
+      "disclaimer": "Откажи било када · Само за iPhone, Android је у плану",
       "devices": {
         "health": "Health",
         "watch": "Watch",
@@ -322,33 +322,29 @@
         "Withings",
         "Strava"
       ],
-      "trackersMore": "+ more coming",
+      "trackersMore": "+ још долази",
       "stats": [
         {
           "value": "180",
           "suffix": "+",
-          "caption": "TestFlight sessions before paid"
+          "caption": "TestFlight сесија пре плаћене верзије"
         },
         {
           "value": "30",
           "suffix": "+",
-          "caption": "customer interviews"
+          "caption": "интервјуа са корисницима"
         },
         {
           "value": "700",
           "suffix": "M+",
-          "caption": "already carry the sensor"
+          "caption": "већ носе сензор"
         },
         {
           "value": "2",
           "suffix": "",
-          "caption": "agents, one answer"
+          "caption": "агента, један одговор"
         }
       ]
-    },
-    "satellites": {
-      "eyebrow": "Explore Soma",
-      "caption": "Same shell, one intent per URL"
     }
   }
 }

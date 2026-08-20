@@ -66,9 +66,18 @@
     "h2": "Your tailored wellness <em>journey</em> is about to start.",
     "lead": "Your ring knows your recovery. Your calendar knows your load. Your sleep app knows your stages. None of them talk to each other — and none of them were ever built to. So you do the translation yourself. Usually badly. Usually alone. Usually at 6am with half a coffee in you and twelve minutes before the first meeting.",
     "signals": [
-      { "a": "Low readiness score", "b": "Fully booked calendar" },
-      { "a": "High sleep score", "b": "Heavy, flat workout" },
-      { "a": "“I feel great” today", "b": "Low HRV overnight" }
+      {
+        "a": "Low readiness score",
+        "b": "Fully booked calendar"
+      },
+      {
+        "a": "High sleep score",
+        "b": "Heavy, flat workout"
+      },
+      {
+        "a": "“I feel great” today",
+        "b": "Low HRV overnight"
+      }
     ],
     "vs": "VS",
     "quote": "“The number was never lying to you. It just wasn’t finished talking.”",
@@ -95,7 +104,14 @@
   "features": {
     "eyebrow": "what soma does",
     "h2": "One home screen for your whole body",
-    "deviceChips": ["oura ring", "whoop", "apple health", "smart scale", "CGM", "+ your habits"],
+    "deviceChips": [
+      "oura ring",
+      "whoop",
+      "apple health",
+      "smart scale",
+      "CGM",
+      "+ your habits"
+    ],
     "cards": [
       {
         "title": "Reasons across everything at once",
@@ -242,9 +258,18 @@
       "h2Line2": "Answered from her fridge.",
       "lead": "She names what she has. Soma returns one full recipe sized to the calories and macros left today, shows how it fits before she commits, walks her through it step by step, then logs it.",
       "macros": {
-        "calories": { "label": "Calories", "value": "517 / 1 701 kcal" },
-        "protein": { "label": "Protein", "value": "52 / 134 g" },
-        "carbsFat": { "label": "Carbs · fat", "value": "52 / 186 g · 12 / 47 g" }
+        "calories": {
+          "label": "Calories",
+          "value": "517 / 1 701 kcal"
+        },
+        "protein": {
+          "label": "Protein",
+          "value": "52 / 134 g"
+        },
+        "carbsFat": {
+          "label": "Carbs · fat",
+          "value": "52 / 186 g · 12 / 47 g"
+        }
       }
     },
     "start": {
@@ -257,18 +282,37 @@
         "oura": "Oura",
         "whoop": "Whoop"
       },
-      "trackers": ["Garmin", "Fitbit", "Polar", "Samsung Health", "Withings", "Strava"],
+      "trackers": [
+        "Garmin",
+        "Fitbit",
+        "Polar",
+        "Samsung Health",
+        "Withings",
+        "Strava"
+      ],
       "trackersMore": "+ more coming",
       "stats": [
-        { "value": "180", "suffix": "+", "caption": "TestFlight sessions before paid" },
-        { "value": "30", "suffix": "+", "caption": "customer interviews" },
-        { "value": "700", "suffix": "M+", "caption": "already carry the sensor" },
-        { "value": "2", "suffix": "", "caption": "agents, one answer" }
+        {
+          "value": "180",
+          "suffix": "+",
+          "caption": "TestFlight sessions before paid"
+        },
+        {
+          "value": "30",
+          "suffix": "+",
+          "caption": "customer interviews"
+        },
+        {
+          "value": "700",
+          "suffix": "M+",
+          "caption": "already carry the sensor"
+        },
+        {
+          "value": "2",
+          "suffix": "",
+          "caption": "agents, one answer"
+        }
       ]
-    },
-    "satellites": {
-      "eyebrow": "Explore Soma",
-      "caption": "Same shell, one intent per URL"
     }
   },
   "footer": {

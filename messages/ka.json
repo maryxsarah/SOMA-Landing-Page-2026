@@ -216,16 +216,16 @@
   },
   "kinetic": {
     "nav": {
-      "inside": "Inside",
-      "food": "Food",
-      "pricing": "Pricing"
+      "inside": "შიგნით",
+      "food": "საკვები",
+      "pricing": "ფასები"
     },
     "hero": {
-      "badge": "Invite-only beta · iPhone · iOS 17+",
-      "h1Line1": "Your body,",
-      "h1Line2": "finally decoded.",
-      "lead": "A fitness agent and a nutrition agent read the data already on your iPhone and hand you one plan a day — the session, the food, the reason why.",
-      "trialLine": "Free {days}-day trial on the yearly plan",
+      "badge": "ბეტა-ვერსია, მხოლოდ მოწვევით · iPhone · iOS 17+",
+      "h1Line1": "შენი სხეული,",
+      "h1Line2": "ბოლოს და ბოლოს გაშიფრული.",
+      "lead": "ფიტნეს-აგენტი და კვების აგენტი კითხულობენ მონაცემებს, რომლებიც უკვე შენს iPhone-ში ინახება, და დღეში ერთხელ გადმოგცემენ ერთ გეგმას — ვარჯიშს, საკვებს და იმის მიზეზს, თუ რატომ.",
+      "trialLine": "{days}-დღიანი უფასო საცდელი პერიოდი წლიურ გეგმაზე",
       "devices": {
         "appleHealth": "Apple Health",
         "oura": "Oura",
@@ -234,83 +234,83 @@
       }
     },
     "cta": {
-      "appStoreAlt": "Download on the App Store",
-      "getGuide": "Get the free Reset Guide",
-      "guideCaption": "Six field notes on reading your data — free, sent the moment you join below."
+      "appStoreAlt": "ჩამოტვირთე App Store-დან",
+      "getGuide": "მიიღე უფასო გადატვირთვის გზამკვლევი",
+      "guideCaption": "ექვსი პრაქტიკული შენიშვნა შენი მონაცემების წაკითხვის შესახებ — უფასოდ, გამოგეგზავნება იმ წამსვე, რაც ქვემოთ შემოუერთდები."
     },
     "band": {
       "words": [
-        "Cook",
-        "Practice by plan",
-        "Use trackers",
-        "Recover",
-        "Decided for you",
-        "Made for her",
-        "Eat well",
-        "Move outside"
+        "მოამზადე",
+        "ივარჯიშე გეგმით",
+        "გამოიყენე ტრეკერები",
+        "აღდექი",
+        "შენს ნაცვლად გადაწყვეტილი",
+        "მისთვის შექმნილი",
+        "ჭამე კარგად",
+        "იმოძრავე გარეთ"
       ]
     },
     "grid": {
-      "eyebrow": "What's inside",
-      "h2": "Everything her plan needs, nothing it doesn't.",
+      "eyebrow": "რა არის შიგნით",
+      "h2": "ყველაფერი, რაც მის გეგმას სჭირდება — და არაფერი ზედმეტი.",
       "daily": {
-        "label": "Daily decision",
-        "h3": "One card. One answer.",
-        "body": "Moderate today, 40 minutes, because Apple Health says she is still recovering. Every recommendation carries its reason."
+        "label": "ყოველდღიური გადაწყვეტილება",
+        "h3": "ერთი ბარათი. ერთი პასუხი.",
+        "body": "დღეს — საშუალო ინტენსივობით, 40 წუთი, რადგან Apple Health გვეუბნება, რომ ის ჯერ კიდევ აღდგენის პროცესშია. ყოველ რეკომენდაციას თან ახლავს მიზეზი."
       },
       "widgets": {
-        "label": "Her widgets",
-        "h3": "She picks what her home screen shows",
-        "body": "Water, sleep, mood, sport goal — on or off, applied instantly."
+        "label": "მისი ვიჯეტები",
+        "h3": "ის თავად ირჩევს, რას აჩვენებს მისი მთავარი ეკრანი",
+        "body": "წყალი, ძილი, განწყობა, სპორტული მიზანი — ჩართე ან გამორთე, ცვლილება მყისვე ამოქმედდება."
       },
       "recovery": {
-        "label": "Recovery-aware",
-        "unit": "h",
-        "body": "Sleep read from Apple Health — deep 2.4, REM 1.2 — and the session sized to it."
+        "label": "აღდგენაზე მორგებული",
+        "unit": "სთ",
+        "body": "ძილის მონაცემები აღებულია Apple Health-დან — ღრმა ძილი 2.4, REM ფაზა 1.2 — და ვარჯიში ამის მიხედვით არის მორგებული."
       },
       "gymScan": {
-        "label": "Gym scan",
-        "h3": "Photograph the room",
-        "body": "The session rebuilds around the equipment that is really there."
+        "label": "დარბაზის სკანირება",
+        "h3": "გადაუღე ფოტო დარბაზს",
+        "body": "ვარჯიში თავიდან იგება იმ ინვენტარის მიხედვით, რომელიც სინამდვილეში იქ არის."
       },
       "proof": {
-        "label": "Proof",
-        "h3": "Evidence, not a streak.",
-        "body": "Goal photo against current photo, week by week — private to her account, and the plan adapts to what is actually changing."
+        "label": "მტკიცებულება",
+        "h3": "მტკიცებულება, არა სერია.",
+        "body": "სამიზნე ფოტო შედარებული მიმდინარე ფოტოსთან, კვირიდან კვირამდე — ხილული მხოლოდ მისი ანგარიშისთვის, და გეგმა მორგდება იმას, რაც რეალურად იცვლება."
       },
       "affirmation": {
-        "label": "Affirmation",
-        "quote": "A kind line, new each morning — generated from the same signals as her plan.",
-        "caption": "New features ship weekly"
+        "label": "აფირმაცია",
+        "quote": "თბილი სტრიქონი, ახალი ყოველ დილით — შექმნილი იმავე სიგნალებით, რომლებითაც მისი გეგმაც იქმნება.",
+        "caption": "ახალი ფუნქციები ყოველკვირეულად ემატება"
       }
     },
     "food": {
-      "label": "Food",
-      "h2Line1": "\"What can I make?\"",
-      "h2Line2": "Answered from her fridge.",
-      "lead": "She names what she has. Soma returns one full recipe sized to the calories and macros left today, shows how it fits before she commits, walks her through it step by step, then logs it.",
+      "label": "საკვები",
+      "h2Line1": "„რისი მომზადება შემიძლია?“",
+      "h2Line2": "პასუხი — პირდაპირ მისი მაცივრიდან.",
+      "lead": "ის ასახელებს, რაც აქვს. Soma პასუხობს ერთი სრული რეცეპტით — მორგებული დღეს დარჩენილ კალორიებსა და მაკროებზე — უჩვენებს, როგორ ერგება ეს გეგმას მანამ, სანამ გადაწყვეტს, ნაბიჯ-ნაბიჯ გაატარებს პროცესში და ბოლოს აღრიცხავს კიდეც.",
       "macros": {
         "calories": {
-          "label": "Calories",
-          "value": "517 / 1 701 kcal"
+          "label": "კალორიები",
+          "value": "517 / 1 701 კკალ"
         },
         "protein": {
-          "label": "Protein",
-          "value": "52 / 134 g"
+          "label": "ცილა",
+          "value": "52 / 134 გ"
         },
         "carbsFat": {
-          "label": "Carbs · fat",
-          "value": "52 / 186 g · 12 / 47 g"
+          "label": "ნახშირწყლები · ცხიმი",
+          "value": "52 / 186 გ · 12 / 47 გ"
         }
       }
     },
     "start": {
-      "h2": "Find your next best day.",
-      "priceLine": "$13.33/month billed annually ($159.99/year) after a free {days}-day trial — or $19.99/month, no trial. One subscription, no hardware.",
-      "disclaimer": "Cancel any time · iPhone only, Android on the roadmap",
+      "h2": "იპოვე შენი შემდეგი საუკეთესო დღე.",
+      "priceLine": "$13.33/თვეში, წლიური გადახდით ($159.99/წელიწადში) {days}-დღიანი უფასო საცდელი პერიოდის შემდეგ — ან $19.99/თვეში, საცდელი პერიოდის გარეშე. ერთი გამოწერა, არანაირი აპარატურა.",
+      "disclaimer": "გააუქმე ნებისმიერ დროს · მხოლოდ iPhone-ისთვის, Android გეგმაშია",
       "devices": {
-        "health": "Health",
-        "watch": "Watch",
+        "health": "ჯანმრთელობა",
+        "watch": "საათი",
         "oura": "Oura",
         "whoop": "Whoop"
       },
@@ -322,33 +322,29 @@
         "Withings",
         "Strava"
       ],
-      "trackersMore": "+ more coming",
+      "trackersMore": "+ მალე მეტი",
       "stats": [
         {
           "value": "180",
           "suffix": "+",
-          "caption": "TestFlight sessions before paid"
+          "caption": "TestFlight სესია ფასიან ვერსიამდე"
         },
         {
           "value": "30",
           "suffix": "+",
-          "caption": "customer interviews"
+          "caption": "მომხმარებელთან ინტერვიუ"
         },
         {
           "value": "700",
           "suffix": "M+",
-          "caption": "already carry the sensor"
+          "caption": "უკვე ატარებენ სენსორს"
         },
         {
           "value": "2",
           "suffix": "",
-          "caption": "agents, one answer"
+          "caption": "აგენტი, ერთი პასუხი"
         }
       ]
-    },
-    "satellites": {
-      "eyebrow": "Explore Soma",
-      "caption": "Same shell, one intent per URL"
     }
   }
 }

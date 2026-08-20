@@ -216,16 +216,16 @@
   },
   "kinetic": {
     "nav": {
-      "inside": "Inside",
-      "food": "Food",
-      "pricing": "Pricing"
+      "inside": "Einblicke",
+      "food": "Essen",
+      "pricing": "Preise"
     },
     "hero": {
-      "badge": "Invite-only beta · iPhone · iOS 17+",
-      "h1Line1": "Your body,",
-      "h1Line2": "finally decoded.",
-      "lead": "A fitness agent and a nutrition agent read the data already on your iPhone and hand you one plan a day — the session, the food, the reason why.",
-      "trialLine": "Free {days}-day trial on the yearly plan",
+      "badge": "Beta nur auf Einladung · iPhone · iOS 17+",
+      "h1Line1": "Dein Körper,",
+      "h1Line2": "endlich entschlüsselt.",
+      "lead": "Ein Fitness-Agent und ein Ernährungs-Agent lesen die Daten, die dein iPhone längst hat, und geben dir jeden Tag einen Plan — das Training, das Essen, den Grund dafür.",
+      "trialLine": "Kostenlose {days}-tägige Testphase im Jahresplan",
       "devices": {
         "appleHealth": "Apple Health",
         "oura": "Oura",
@@ -234,64 +234,64 @@
       }
     },
     "cta": {
-      "appStoreAlt": "Download on the App Store",
-      "getGuide": "Get the free Reset Guide",
-      "guideCaption": "Six field notes on reading your data — free, sent the moment you join below."
+      "appStoreAlt": "Laden im App Store",
+      "getGuide": "Hol dir den kostenlosen Reset-Guide",
+      "guideCaption": "Sechs Feldnotizen zum Lesen deiner Daten — kostenlos, verschickt in dem Moment, in dem du dich unten einträgst."
     },
     "band": {
       "words": [
-        "Cook",
-        "Practice by plan",
-        "Use trackers",
-        "Recover",
-        "Decided for you",
-        "Made for her",
-        "Eat well",
-        "Move outside"
+        "Kochen",
+        "Nach Plan trainieren",
+        "Tracker nutzen",
+        "Erholen",
+        "Für dich entschieden",
+        "Für sie gemacht",
+        "Gut essen",
+        "Draußen bewegen"
       ]
     },
     "grid": {
-      "eyebrow": "What's inside",
-      "h2": "Everything her plan needs, nothing it doesn't.",
+      "eyebrow": "Was drinsteckt",
+      "h2": "Alles, was ihr Plan braucht — nichts, was er nicht braucht.",
       "daily": {
-        "label": "Daily decision",
-        "h3": "One card. One answer.",
-        "body": "Moderate today, 40 minutes, because Apple Health says she is still recovering. Every recommendation carries its reason."
+        "label": "Tägliche Entscheidung",
+        "h3": "Eine Karte. Eine Antwort.",
+        "body": "Heute moderat, 40 Minuten, weil Apple Health zeigt, dass sie sich noch erholt. Jede Empfehlung trägt ihren Grund in sich."
       },
       "widgets": {
-        "label": "Her widgets",
-        "h3": "She picks what her home screen shows",
-        "body": "Water, sleep, mood, sport goal — on or off, applied instantly."
+        "label": "Ihre Widgets",
+        "h3": "Sie entscheidet, was ihr Homescreen zeigt",
+        "body": "Wasser, Schlaf, Stimmung, Sportziel — an oder aus, sofort übernommen."
       },
       "recovery": {
-        "label": "Recovery-aware",
+        "label": "Erholung im Blick",
         "unit": "h",
-        "body": "Sleep read from Apple Health — deep 2.4, REM 1.2 — and the session sized to it."
+        "body": "Schlaf ausgelesen aus Apple Health — Tiefschlaf 2.4, REM 1.2 — und das Training darauf abgestimmt."
       },
       "gymScan": {
-        "label": "Gym scan",
-        "h3": "Photograph the room",
-        "body": "The session rebuilds around the equipment that is really there."
+        "label": "Gym-Scan",
+        "h3": "Fotografiere den Raum",
+        "body": "Das Training passt sich an die Geräte an, die wirklich da sind."
       },
       "proof": {
-        "label": "Proof",
-        "h3": "Evidence, not a streak.",
-        "body": "Goal photo against current photo, week by week — private to her account, and the plan adapts to what is actually changing."
+        "label": "Beweis",
+        "h3": "Beweise, keine Serie.",
+        "body": "Zielfoto gegen aktuelles Foto, Woche für Woche — privat in ihrem Account, und der Plan passt sich an das an, was sich wirklich verändert."
       },
       "affirmation": {
         "label": "Affirmation",
-        "quote": "A kind line, new each morning — generated from the same signals as her plan.",
-        "caption": "New features ship weekly"
+        "quote": "Eine freundliche Zeile, jeden Morgen neu — erzeugt aus denselben Signalen wie ihr Plan.",
+        "caption": "Jede Woche neue Funktionen"
       }
     },
     "food": {
-      "label": "Food",
-      "h2Line1": "\"What can I make?\"",
-      "h2Line2": "Answered from her fridge.",
-      "lead": "She names what she has. Soma returns one full recipe sized to the calories and macros left today, shows how it fits before she commits, walks her through it step by step, then logs it.",
+      "label": "Essen",
+      "h2Line1": "„Was kann ich kochen?“",
+      "h2Line2": "Antwort aus ihrem Kühlschrank.",
+      "lead": "Sie nennt, was sie hat. Soma liefert ein vollständiges Rezept, zugeschnitten auf die Kalorien und Makros, die ihr heute noch bleiben, zeigt, wie es passt, bevor sie sich entscheidet, führt sie Schritt für Schritt hindurch und trägt es dann ein.",
       "macros": {
         "calories": {
-          "label": "Calories",
+          "label": "Kalorien",
           "value": "517 / 1 701 kcal"
         },
         "protein": {
@@ -299,15 +299,15 @@
           "value": "52 / 134 g"
         },
         "carbsFat": {
-          "label": "Carbs · fat",
+          "label": "Kohlenhydrate · Fett",
           "value": "52 / 186 g · 12 / 47 g"
         }
       }
     },
     "start": {
-      "h2": "Find your next best day.",
-      "priceLine": "$13.33/month billed annually ($159.99/year) after a free {days}-day trial — or $19.99/month, no trial. One subscription, no hardware.",
-      "disclaimer": "Cancel any time · iPhone only, Android on the roadmap",
+      "h2": "Finde deinen nächsten besten Tag.",
+      "priceLine": "$13.33/Monat, jährlich abgerechnet ($159.99/Jahr) nach einer kostenlosen {days}-tägigen Testphase — oder $19.99/Monat, ohne Testphase. Ein Abo, keine Hardware.",
+      "disclaimer": "Jederzeit kündbar · Nur iPhone, Android in Planung",
       "devices": {
         "health": "Health",
         "watch": "Watch",
@@ -322,33 +322,29 @@
         "Withings",
         "Strava"
       ],
-      "trackersMore": "+ more coming",
+      "trackersMore": "+ weitere folgen",
       "stats": [
         {
           "value": "180",
           "suffix": "+",
-          "caption": "TestFlight sessions before paid"
+          "caption": "TestFlight-Sessions vor dem Bezahlstart"
         },
         {
           "value": "30",
           "suffix": "+",
-          "caption": "customer interviews"
+          "caption": "Kundeninterviews"
         },
         {
           "value": "700",
           "suffix": "M+",
-          "caption": "already carry the sensor"
+          "caption": "tragen den Sensor bereits am Körper"
         },
         {
           "value": "2",
           "suffix": "",
-          "caption": "agents, one answer"
+          "caption": "Agenten, eine Antwort"
         }
       ]
-    },
-    "satellites": {
-      "eyebrow": "Explore Soma",
-      "caption": "Same shell, one intent per URL"
     }
   }
 }
