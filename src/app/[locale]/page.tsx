@@ -18,6 +18,7 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: 'home' });
   return pageMetadata({
     archetype: 'hub',
+    title: t('metaTitle'),
     description: t('metaDescription'),
     path: '/',
     locale: locale as Locale,

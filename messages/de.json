@@ -212,7 +212,8 @@
       "Gym-Scan: Fotografiere den Raum, die Einheit baut sich um die vorhandenen Geräte neu auf",
       "Fortschritt per Ziel-Foto gegen Aktuell-Foto, nicht per Streak",
       "Rezepte aus dem, was im Kühlschrank ist, passend zu den heute verbleibenden Kalorien und Makros"
-    ]
+    ],
+    "metaTitle": "SOMA — Das KI-Betriebssystem für deine Gesundheit"
   },
   "kinetic": {
     "nav": {

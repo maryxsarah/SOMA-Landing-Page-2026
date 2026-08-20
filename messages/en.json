@@ -339,6 +339,7 @@
     "faqTitle": "FAQ"
   },
   "home": {
+    "metaTitle": "SOMA — The AI Operating System for Your Health",
     "metaDescription": "A fitness agent and a nutrition agent read the data already on your iPhone and hand you one plan a day — the workout, the food, and the reason why.",
     "jsonLdFeatures": [
       "One adaptive daily plan — the workout and the macros, with the reason behind both",

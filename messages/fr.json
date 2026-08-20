@@ -212,7 +212,8 @@
       "Scan de salle : photographie la pièce et la séance se reconstruit avec le matériel présent",
       "Progression par photo-objectif contre photo-actuelle, pas par série de jours",
       "Des recettes à partir du frigo, calibrées sur les calories et macros restantes"
-    ]
+    ],
+    "metaTitle": "SOMA — Le système d'exploitation IA pour votre santé"
   },
   "kinetic": {
     "nav": {
