@@ -3,7 +3,10 @@ import nodemailer from 'nodemailer';
 // Needs real TCP sockets for SMTP — can't run on the edge runtime.
 export const runtime = 'nodejs';
 
-const SUPPORT_TO = 'team@soma4health.com';
+// `+support` is Gmail's plus-addressing: still delivers to team@soma4health.com,
+// but lets a Gmail filter on "To: team+support@soma4health.com" auto-label
+// these without touching anything else landing in the shared inbox.
+const SUPPORT_TO = 'team+support@soma4health.com';
 const EMAIL_RE = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
 const MAX_LEN = { name: 200, email: 200, message: 5000 };
 
