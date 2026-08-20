@@ -201,6 +201,23 @@
   "legal": {
     "lastUpdated": "Zuletzt aktualisiert am {date}"
   },
+  "support": {
+    "title": "Support kontaktieren",
+    "intro": "Haben Sie eine Frage oder einen Fehler gefunden? Schreiben Sie uns, wir melden uns bei Ihnen.",
+    "directEmail": "Lieber per E-Mail? Schreiben Sie uns direkt an"
+  },
+  "supportForm": {
+    "nameLabel": "Name",
+    "namePlaceholder": "Ihr Name",
+    "emailLabel": "E-Mail-Adresse",
+    "emailPlaceholder": "sie@beispiel.com",
+    "messageLabel": "Nachricht",
+    "messagePlaceholder": "Wie können wir helfen?",
+    "sendButton": "Nachricht senden",
+    "sendingButton": "Wird gesendet…",
+    "successMessage": "Danke — wir haben Ihre Nachricht erhalten und melden uns bald.",
+    "errorMessage": "Etwas ist schiefgelaufen — prüfen Sie Ihre Angaben und versuchen Sie es erneut."
+  },
   "spoke": {
     "atAGlance": "Auf einen Blick",
     "faqTitle": "FAQ"

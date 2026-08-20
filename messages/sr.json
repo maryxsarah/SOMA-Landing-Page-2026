@@ -201,6 +201,23 @@
   "legal": {
     "lastUpdated": "Последње ажурирано {date}"
   },
+  "support": {
+    "title": "Контактирајте подршку",
+    "intro": "Имате питање или сте пронашли грешку? Пошаљите нам поруку и одговорићемо вам.",
+    "directEmail": "Више волите имејл? Пишите нам директно на"
+  },
+  "supportForm": {
+    "nameLabel": "Име",
+    "namePlaceholder": "Ваше име",
+    "emailLabel": "Имејл адреса",
+    "emailPlaceholder": "vi@primer.com",
+    "messageLabel": "Порука",
+    "messagePlaceholder": "Како можемо да помогнемо?",
+    "sendButton": "Пошаљи поруку",
+    "sendingButton": "Слање…",
+    "successMessage": "Хвала — примили смо вашу поруку и ускоро ћемо одговорити.",
+    "errorMessage": "Нешто није у реду — проверите податке и покушајте поново."
+  },
   "spoke": {
     "atAGlance": "Укратко",
     "faqTitle": "Честа питања"

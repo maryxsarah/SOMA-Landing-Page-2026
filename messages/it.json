@@ -201,6 +201,23 @@
   "legal": {
     "lastUpdated": "Ultimo aggiornamento: {date}"
   },
+  "support": {
+    "title": "Contatta il supporto",
+    "intro": "Hai una domanda o hai trovato un bug? Inviaci un messaggio e ti risponderemo.",
+    "directEmail": "Preferisci l’email? Scrivici direttamente a"
+  },
+  "supportForm": {
+    "nameLabel": "Nome",
+    "namePlaceholder": "Il tuo nome",
+    "emailLabel": "Indirizzo email",
+    "emailPlaceholder": "tu@esempio.com",
+    "messageLabel": "Messaggio",
+    "messagePlaceholder": "Come possiamo aiutarti?",
+    "sendButton": "Invia messaggio",
+    "sendingButton": "Invio in corso…",
+    "successMessage": "Grazie — abbiamo ricevuto il tuo messaggio e ti risponderemo presto.",
+    "errorMessage": "Qualcosa è andato storto — controlla i dati e riprova."
+  },
   "spoke": {
     "atAGlance": "In breve",
     "faqTitle": "FAQ"

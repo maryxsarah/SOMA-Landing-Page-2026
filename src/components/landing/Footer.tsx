@@ -48,7 +48,7 @@ export const Footer = () => {
     {
       title: t('companyTitle'),
       links: [
-        { label: t('contactLink'), href: 'mailto:team@soma4health.com', external: true },
+        { label: t('contactLink'), href: '/support' },
         {
           label: t('investorsLink'),
           href: 'mailto:team@soma4health.com?subject=SOMA%20investor%20enquiry',

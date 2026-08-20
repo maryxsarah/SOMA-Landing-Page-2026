@@ -334,6 +334,23 @@
   "legal": {
     "lastUpdated": "Last updated {date}"
   },
+  "support": {
+    "title": "Contact support",
+    "intro": "Have a question or found a bug? Send us a message and we’ll get back to you.",
+    "directEmail": "Prefer email? Write to us directly at"
+  },
+  "supportForm": {
+    "nameLabel": "Name",
+    "namePlaceholder": "Your name",
+    "emailLabel": "Email address",
+    "emailPlaceholder": "you@example.com",
+    "messageLabel": "Message",
+    "messagePlaceholder": "How can we help?",
+    "sendButton": "Send message",
+    "sendingButton": "Sending…",
+    "successMessage": "Thanks — we got your message and will reply soon.",
+    "errorMessage": "Something went wrong — check your details and try again."
+  },
   "spoke": {
     "atAGlance": "At a glance",
     "faqTitle": "FAQ"

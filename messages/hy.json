@@ -201,6 +201,23 @@
   "legal": {
     "lastUpdated": "Վերջին թարմացումը՝ {date}"
   },
+  "support": {
+    "title": "Կապվել աջակցության հետ",
+    "intro": "Հարց ունե՞ք կամ սխալ եք գտել։ Գրեք մեզ, և մենք կպատասխանենք։",
+    "directEmail": "Նախընտրու՞մ եք էլ. փոստը։ Գրեք մեզ ուղղակիորեն"
+  },
+  "supportForm": {
+    "nameLabel": "Անուն",
+    "namePlaceholder": "Ձեր անունը",
+    "emailLabel": "Էլ. փոստի հասցե",
+    "emailPlaceholder": "you@example.com",
+    "messageLabel": "Հաղորդագրություն",
+    "messagePlaceholder": "Ինչո՞վ կարող ենք օգնել",
+    "sendButton": "Ուղարկել հաղորդագրությունը",
+    "sendingButton": "Ուղարկվում է…",
+    "successMessage": "Շնորհակալություն — մենք ստացանք ձեր հաղորդագրությունը և շուտով կպատասխանենք։",
+    "errorMessage": "Ինչ-որ բան այնպես չգնաց — ստուգեք ձեր տվյալները և փորձեք կրկին։"
+  },
   "spoke": {
     "atAGlance": "Համառոտ",
     "faqTitle": "ՀՏՀ"

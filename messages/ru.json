@@ -201,6 +201,23 @@
   "legal": {
     "lastUpdated": "Последнее обновление: {date}"
   },
+  "support": {
+    "title": "Связаться с поддержкой",
+    "intro": "Есть вопрос или нашли баг? Напишите нам, и мы ответим.",
+    "directEmail": "Предпочитаете email? Напишите нам напрямую на"
+  },
+  "supportForm": {
+    "nameLabel": "Имя",
+    "namePlaceholder": "Ваше имя",
+    "emailLabel": "Email",
+    "emailPlaceholder": "you@example.com",
+    "messageLabel": "Сообщение",
+    "messagePlaceholder": "Чем мы можем помочь?",
+    "sendButton": "Отправить сообщение",
+    "sendingButton": "Отправка…",
+    "successMessage": "Спасибо — мы получили ваше сообщение и скоро ответим.",
+    "errorMessage": "Что-то пошло не так — проверьте данные и попробуйте снова."
+  },
   "spoke": {
     "atAGlance": "Коротко о главном",
     "faqTitle": "Вопросы"

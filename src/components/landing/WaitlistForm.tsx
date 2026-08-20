@@ -107,7 +107,7 @@ export const WaitlistForm: React.FC<{ className?: string }> = ({ className }) =>
 
   return (
     <form onSubmit={submit} className={cn('flex w-full max-w-md flex-col gap-3', className)}>
-      <div className="flex gap-2">
+      <div className="flex flex-col gap-2 sm:flex-row">
         <label htmlFor="waitlist-email" className="sr-only">
           {t('emailLabel')}
         </label>
@@ -119,7 +119,7 @@ export const WaitlistForm: React.FC<{ className?: string }> = ({ className }) =>
           onChange={(e) => setEmail(e.target.value)}
           placeholder={t('emailPlaceholder')}
           aria-describedby={status === 'error' ? 'waitlist-error' : undefined}
-          className="h-12 flex-1 rounded-full border border-[var(--ld-line-strong)] bg-[var(--ld-surface)] px-5 text-[color:var(--ld-ink)] placeholder:text-[color:var(--ld-text-3)] focus:border-[var(--ld-accent)] focus:outline-none"
+          className="h-12 min-w-0 rounded-full border border-[var(--ld-line-strong)] bg-[var(--ld-surface)] px-5 text-[color:var(--ld-ink)] placeholder:text-[color:var(--ld-text-3)] focus:border-[var(--ld-accent)] focus:outline-none sm:flex-1"
         />
         {/* Honeypot: off-screen, NOT display:none — some bots skip those. */}
         <input
@@ -135,7 +135,7 @@ export const WaitlistForm: React.FC<{ className?: string }> = ({ className }) =>
         <button
           type="submit"
           disabled={status === 'submitting'}
-          className="h-12 rounded-full bg-[var(--ld-accent)] px-6 font-semibold text-white transition-transform hover:scale-[1.02] hover:bg-[var(--ld-accent-hover)] disabled:opacity-60"
+          className="h-12 shrink-0 rounded-full bg-[var(--ld-accent)] px-6 font-semibold text-white transition-transform hover:scale-[1.02] hover:bg-[var(--ld-accent-hover)] disabled:opacity-60"
         >
           {status === 'submitting' ? t('joiningButton') : t('joinButton')}
         </button>

@@ -201,6 +201,23 @@
   "legal": {
     "lastUpdated": "ბოლო განახლება: {date}"
   },
+  "support": {
+    "title": "დაუკავშირდით მხარდაჭერას",
+    "intro": "გაქვთ შეკითხვა თუ იპოვეთ ხარვეზი? მოგვწერეთ და ჩვენ გიპასუხებთ.",
+    "directEmail": "გირჩევნიათ ელფოსტა? მოგვწერეთ პირდაპირ"
+  },
+  "supportForm": {
+    "nameLabel": "სახელი",
+    "namePlaceholder": "თქვენი სახელი",
+    "emailLabel": "ელფოსტის მისამართი",
+    "emailPlaceholder": "you@example.com",
+    "messageLabel": "შეტყობინება",
+    "messagePlaceholder": "როგორ შეგვიძლია დაგეხმაროთ?",
+    "sendButton": "შეტყობინების გაგზავნა",
+    "sendingButton": "იგზავნება…",
+    "successMessage": "მადლობა — მივიღეთ თქვენი შეტყობინება და მალე გიპასუხებთ.",
+    "errorMessage": "რაღაც შეცდომა მოხდა — გადაამოწმეთ მონაცემები და სცადეთ ისევ."
+  },
   "spoke": {
     "atAGlance": "ერთი შეხედვით",
     "faqTitle": "კითხვები"

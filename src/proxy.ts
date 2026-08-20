@@ -81,10 +81,14 @@ export function proxy(req: NextRequest) {
 
   // 3. Root-level unprefixed routes bypass next-intl entirely — they live
   // outside app/[locale] (sitemap.ts, robots.ts, llms.txt/route.ts,
-  // opengraph-image.tsx, spoke-md/[bucket]/[slug]/route.ts) and next-intl
-  // would otherwise try to locale-negotiate/rewrite them into a
-  // [locale]-nested path that doesn't exist, 404ing every one of them.
-  if (PUBLIC_PATHS.some((p) => pathname.startsWith(p)) || pathname.startsWith('/spoke-md')) {
+  // opengraph-image.tsx, spoke-md/[bucket]/[slug]/route.ts, api/*/route.ts)
+  // and next-intl would otherwise try to locale-negotiate/rewrite them into
+  // a [locale]-nested path that doesn't exist, 404ing every one of them.
+  if (
+    PUBLIC_PATHS.some((p) => pathname.startsWith(p)) ||
+    pathname.startsWith('/spoke-md') ||
+    pathname.startsWith('/api/')
+  ) {
     return NextResponse.next();
   }
 
