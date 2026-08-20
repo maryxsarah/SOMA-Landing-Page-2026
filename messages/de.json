@@ -206,12 +206,12 @@
     "faqTitle": "FAQ"
   },
   "home": {
-    "metaDescription": "SOMA ist ein herstellerunabhängiger KI-Gesundheitsagent. Er liest deinen Ring, dein Band, deine Waage und dein CGM gemeinsam und antwortet mit einem Plan für heute — nicht vier Dashboards.",
+    "metaDescription": "Ein Fitness-Agent und ein Ernährungs-Agent lesen die Daten, die dein iPhone schon hat, und geben dir einen Plan pro Tag: das Training, das Essen und das Warum.",
     "jsonLdFeatures": [
-      "Ein Tagesplan, der über alle verbundenen Wearables hinweg durchdacht ist",
-      "Funktioniert mit Ringen, Bändern, Smartwaagen und CGMs",
-      "Check-ins per Chat oder Sprache — tippen oder sagen",
-      "Proaktive Kontaktaufnahme, wenn sich etwas so verändert, dass es wichtig wird"
+      "Ein adaptiver Tagesplan: das Training und die Makros, jeweils mit Begründung",
+      "Gym-Scan: Fotografiere den Raum, die Einheit baut sich um die vorhandenen Geräte neu auf",
+      "Fortschritt per Ziel-Foto gegen Aktuell-Foto, nicht per Streak",
+      "Rezepte aus dem, was im Kühlschrank ist, passend zu den heute verbleibenden Kalorien und Makros"
     ]
   },
   "kinetic": {
@@ -225,13 +225,18 @@
       "h1Line1": "Your body,",
       "h1Line2": "finally decoded.",
       "lead": "A fitness agent and a nutrition agent read the data already on your iPhone and hand you one plan a day — the session, the food, the reason why.",
-      "trialLine": "Free {days}-day trial · cancel any time",
+      "trialLine": "Free {days}-day trial on the yearly plan",
       "devices": {
         "appleHealth": "Apple Health",
         "oura": "Oura",
         "appleWatch": "Apple Watch",
         "whoop": "Whoop"
       }
+    },
+    "cta": {
+      "appStoreAlt": "Download on the App Store",
+      "getGuide": "Get the free Reset Guide",
+      "guideCaption": "Six field notes on reading your data — free, sent the moment you join below."
     },
     "band": {
       "words": [
@@ -301,7 +306,7 @@
     },
     "start": {
       "h2": "Find your next best day.",
-      "priceLine": "Free {days}-day trial, then $19.99/month — or $13.33/month billed annually. One subscription, no hardware.",
+      "priceLine": "$13.33/month billed annually ($159.99/year) after a free {days}-day trial — or $19.99/month, no trial. One subscription, no hardware.",
       "disclaimer": "Cancel any time · iPhone only, Android on the roadmap",
       "devices": {
         "health": "Health",

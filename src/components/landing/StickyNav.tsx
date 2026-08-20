@@ -7,11 +7,16 @@ import { CTA_HREF } from '@/lib/launch';
 import { useCtaLabel } from '@/lib/useCtaLabel';
 import { CtaButton } from './CtaButton';
 
-const NAV_ANCHORS = ['features', 'howItWorks', 'faq'] as const;
+// Anchors must exist on the CURRENT homepage. The kinetic v7 redesign
+// renamed the sections (#features/#how-it-works/#faq -> #grid/#food/#start)
+// and these links kept pointing at the old ids, so all three silently landed
+// at the top of `/`. `howItWorks` and `faq` are omitted rather than
+// re-pointed: the kinetic homepage has no equivalent of either. Re-add
+// `faq: '#faq'` here the moment an FAQ section is back on the homepage — the
+// translated label is still in messages/*.json under `nav.faq`.
+const NAV_ANCHORS = ['features'] as const;
 const NAV_HASHES: Record<(typeof NAV_ANCHORS)[number], string> = {
-  features: '#features',
-  howItWorks: '#how-it-works',
-  faq: '#faq',
+  features: '#grid',
 };
 
 /**

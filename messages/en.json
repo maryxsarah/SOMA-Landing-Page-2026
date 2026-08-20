@@ -177,13 +177,18 @@
       "h1Line1": "Your body,",
       "h1Line2": "finally decoded.",
       "lead": "A fitness agent and a nutrition agent read the data already on your iPhone and hand you one plan a day — the session, the food, the reason why.",
-      "trialLine": "Free {days}-day trial · cancel any time",
+      "trialLine": "Free {days}-day trial on the yearly plan",
       "devices": {
         "appleHealth": "Apple Health",
         "oura": "Oura",
         "appleWatch": "Apple Watch",
         "whoop": "Whoop"
       }
+    },
+    "cta": {
+      "appStoreAlt": "Download on the App Store",
+      "getGuide": "Get the free Reset Guide",
+      "guideCaption": "Six field notes on reading your data — free, sent the moment you join below."
     },
     "band": {
       "words": [
@@ -244,7 +249,7 @@
     },
     "start": {
       "h2": "Find your next best day.",
-      "priceLine": "Free {days}-day trial, then $19.99/month — or $13.33/month billed annually. One subscription, no hardware.",
+      "priceLine": "$13.33/month billed annually ($159.99/year) after a free {days}-day trial — or $19.99/month, no trial. One subscription, no hardware.",
       "disclaimer": "Cancel any time · iPhone only, Android on the roadmap",
       "devices": {
         "health": "Health",
@@ -290,12 +295,12 @@
     "faqTitle": "FAQ"
   },
   "home": {
-    "metaDescription": "SOMA is a vendor-independent AI health agent. It reads your ring, band, scale and CGM together and answers with one plan for today — not four dashboards.",
+    "metaDescription": "A fitness agent and a nutrition agent read the data already on your iPhone and hand you one plan a day — the workout, the food, and the reason why.",
     "jsonLdFeatures": [
-      "One daily plan reasoned across every connected wearable",
-      "Works with rings, bands, smart scales and CGMs",
-      "Chat or voice check-ins — type it or say it",
-      "Proactive outreach when something changes enough to matter"
+      "One adaptive daily plan — the workout and the macros, with the reason behind both",
+      "Gym scan: photograph any room and the session rebuilds around the equipment that's there",
+      "Progress by goal-photo against current-photo, not by streak",
+      "Recipes from what's in the fridge, sized to the calories and macros left today"
     ]
   }
 }

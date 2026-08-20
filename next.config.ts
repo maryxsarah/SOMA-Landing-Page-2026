@@ -32,6 +32,18 @@ const nextConfig: NextConfig = {
         source: '/landing/:path*',
         headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
       },
+      // The AASA file has no extension, so static serving guesses
+      // application/octet-stream. Apple documents application/json; say it
+      // explicitly rather than rely on their CDN being lenient. Short TTL
+      // because adding a path (e.g. /auth/reset-password) must reach devices
+      // without waiting out a long cache.
+      {
+        source: '/.well-known/apple-app-site-association',
+        headers: [
+          { key: 'Content-Type', value: 'application/json' },
+          { key: 'Cache-Control', value: 'public, max-age=3600' },
+        ],
+      },
     ];
   },
 };

@@ -18,7 +18,7 @@ const overrides: SpokeLocaleOverrides = {
         { dim: 'Wo es lebt', them: 'In der Oura-App', us: 'Ein Startbildschirm — Chat oder Sprache' },
         { dim: 'Wer das Gespräch beginnt', them: 'Du öffnest die App und fragst', us: 'SOMA meldet sich zuerst, wenn sich etwas ändert' },
         { dim: 'Wenn du die Hardware wechselst', them: 'Die Empfehlungen bleiben bei Oura', us: 'Herstellerunabhängig — deine Historie geht mit dir mit' },
-        { dim: 'Preis', them: 'In der Oura-Mitgliedschaft enthalten', us: 'Ab $99/Monat zum Launch' },
+        { dim: 'Preis', them: 'In der Oura-Mitgliedschaft enthalten', us: 'Ab $19,99/Monat zum Launch' },
       ],
     },
     sections: [
@@ -65,7 +65,7 @@ const overrides: SpokeLocaleOverrides = {
         { dim: 'Wo es lebt', them: 'In der Whoop-App', us: 'Ein Startbildschirm — Chat oder Sprache' },
         { dim: 'Wer das Gespräch beginnt', them: 'Du öffnest die App und fragst', us: 'SOMA meldet sich zuerst, wenn sich etwas ändert' },
         { dim: 'Wenn du die Hardware wechselst', them: 'Die Empfehlungen bleiben bei Whoop', us: 'Herstellerunabhängig — deine Historie geht mit dir mit' },
-        { dim: 'Preis', them: 'In der Whoop-Mitgliedschaft enthalten', us: 'Ab $99/Monat zum Launch' },
+        { dim: 'Preis', them: 'In der Whoop-Mitgliedschaft enthalten', us: 'Ab $19,99/Monat zum Launch' },
       ],
     },
     sections: [

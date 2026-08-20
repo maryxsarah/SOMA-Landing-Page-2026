@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { cn } from '@/lib/cn';
 import { track } from '@/lib/analytics';
+import { readLastAttribution, readOriginalAttribution } from '@/lib/attribution';
 
 const EMAIL_RE = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
 
@@ -47,10 +48,37 @@ export const WaitlistForm: React.FC<{ className?: string }> = ({ className }) =>
       return;
     }
     setStatus('submitting');
-    track('waitlist_submit', { path: pathname ?? '/' });
+
+    // Attribution rides along to BOTH destinations. captureAttribution()
+    // has been storing UTMs since launch, but nothing read them back: Kit
+    // received the bare email, so no waitlist row could be traced to the
+    // creator or campaign that produced it — which is the whole basis of
+    // the performance-only creator deals. First-touch credits discovery,
+    // last-touch credits the click that converted; send both and decide the
+    // payout rule in Kit, not here.
+    const first = readOriginalAttribution();
+    const last = readLastAttribution();
+    const attribution = {
+      utm_source: last?.utm_source ?? '',
+      utm_medium: last?.utm_medium ?? '',
+      utm_campaign: last?.utm_campaign ?? '',
+      utm_content: last?.utm_content ?? '',
+      first_touch_source: first?.utm_source ?? '',
+      first_touch_campaign: first?.utm_campaign ?? '',
+      landing_path: first?.landing_path ?? '',
+      signup_path: pathname ?? '/',
+    };
+
+    track('waitlist_submit', { path: pathname ?? '/', ...attribution });
     try {
       const body = new FormData();
       body.append('email_address', email);
+      // Kit stores custom fields as `fields[name]`; each name below must
+      // exist as a custom field on the soma4health account or Kit silently
+      // drops it (the subscription itself still succeeds).
+      for (const [key, value] of Object.entries(attribution)) {
+        if (value) body.append(`fields[${key}]`, value);
+      }
       const res = await fetch(KIT_FORM_ACTION, {
         method: 'POST',
         headers: { Accept: 'application/json' },
@@ -59,7 +87,7 @@ export const WaitlistForm: React.FC<{ className?: string }> = ({ className }) =>
       const data = await res.json();
       if (!res.ok || data.status !== 'success') throw new Error('request failed');
       setStatus('success');
-      track('waitlist_success', { path: pathname ?? '/' });
+      track('waitlist_success', { path: pathname ?? '/', ...attribution });
     } catch {
       setStatus('error');
     }
@@ -117,7 +145,11 @@ export const WaitlistForm: React.FC<{ className?: string }> = ({ className }) =>
           {t('errorMessage')}
         </p>
       )}
-      <p className="text-xs text-[color:var(--ld-text-3)]">
+      {/* This line is the only answer to "are you going to spam me?", so it
+          sits right under the primary conversion and has to be readable.
+          --ld-text-3 (#a7b0b6) at 12px measured 2.20:1 on the white card —
+          AA wants 4.5:1. --ld-text-2 (#565f66) is 6.42:1. */}
+      <p className="text-[13px] text-[color:var(--ld-text-2)]">
         {t('disclaimer')}{' '}
         {/* TODO(brand): link the real privacy policy */}
       </p>

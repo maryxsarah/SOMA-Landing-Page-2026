@@ -16,7 +16,7 @@ export const KineticSatellites = () => {
   const spokes = SPOKES.map((s) => localizeSpokeCopy(s, locale));
 
   return (
-    <section className="relative mx-auto mt-[76px] max-w-[1280px] px-10">
+    <section className="relative mx-auto mt-[76px] max-w-[1280px] px-10 max-[900px]:mt-12 max-[900px]:px-5">
       <div
         data-r
         data-from="up"
@@ -27,7 +27,7 @@ export const KineticSatellites = () => {
         </div>
         <div className="text-[13px] text-[color:var(--k-ink-faint)]">{t('satellites.caption')}</div>
       </div>
-      <div data-r data-from="up" data-d="1" className="grid grid-cols-3 gap-3">
+      <div data-r data-from="up" data-d="1" className="grid grid-cols-3 gap-3 max-[900px]:grid-cols-1">
         {spokes.map((spoke) => (
           <Link
             key={spoke.docSlug}

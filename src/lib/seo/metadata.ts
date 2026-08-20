@@ -13,16 +13,30 @@ export type Archetype =
   | 'pricing'
   | 'howTo';
 
-// Category query: "AI health agent" (vendor-independent, multi-wearable).
+// Category: "AI operating system for your health" — a deliberate BRAND
+// framing, chosen over a search-led one (e.g. "AI workout & nutrition
+// coach"). Nobody searches this phrase, so the hub is not an acquisition
+// page: the concrete, searchable words live in the meta description (which
+// is what shows in the SERP snippet and what an LLM summarizes) and the
+// acquisition load sits on the spokes, each owning one real query. Keep that
+// division intact — if a spoke ever starts targeting the brand phrase
+// instead of a query, this site has no entry point left.
+//
+// Brand-name rule: only `hub` and `howTo` write the brand, because only they
+// bypass the layout's `%s | Brand` template (see `absolute` below). Every
+// other archetype leaves the brand to the template — appending it here too
+// produced titles like "Oura Advisor alternative — SOMA | SOMA" on all 54
+// spoke URLs. `compare` and `glossary` are the deliberate exceptions: their
+// brand mention is a grammatical part of the phrase, not a suffix.
 export const archetypeTitles: Record<Archetype, (subject: string) => string> = {
-  hub: () => `${BRAND.productFull} — AI Health Agent for All Your Wearables`,
-  feature: (s) => `${s} — ${BRAND.productShort}`,
-  alternative: (s) => `${s} alternative — ${BRAND.productShort}`,
+  hub: () => `${BRAND.productFull} — The AI Operating System for Your Health`,
+  feature: (s) => s,
+  alternative: (s) => `${s} alternative`,
   compare: (s) => `${s} vs ${BRAND.productShort}: which one wins?`,
-  for: (s) => `${BRAND.productShort} for ${s}`,
+  for: (s) => `For ${s}`,
   glossary: (s) => `${s} — what it is and how to use it in ${BRAND.productShort}`,
-  blog: (s) => `${s} — ${BRAND.productShort}`,
-  pricing: () => `Pricing — ${BRAND.productFull}`,
+  blog: (s) => s,
+  pricing: () => 'Pricing',
   howTo: (s) => `How to ${s} | ${BRAND.productShort}`,
 };
 

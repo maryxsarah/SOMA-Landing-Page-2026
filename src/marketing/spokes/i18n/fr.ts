@@ -37,7 +37,7 @@ const overrides: SpokeLocaleOverrides = {
         {
           dim: "Prix",
           them: "Inclus avec l'abonnement Oura",
-          us: "À partir de 99 $/mois au lancement",
+          us: "À partir de 19,99 $/mois au lancement",
         },
       ],
     },
@@ -104,7 +104,7 @@ const overrides: SpokeLocaleOverrides = {
         {
           dim: "Prix",
           them: "Inclus avec l'abonnement Whoop",
-          us: "À partir de 99 $/mois au lancement",
+          us: "À partir de 19,99 $/mois au lancement",
         },
       ],
     },

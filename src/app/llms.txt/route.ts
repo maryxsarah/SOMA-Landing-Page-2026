@@ -1,3 +1,4 @@
+import { PRICING } from '@/lib/pricing';
 import { BASE_URL, BRAND } from '@/lib/seo/constants';
 import { SPOKES, spokePath } from '@/marketing/spokes/registry';
 
@@ -13,15 +14,16 @@ export function GET() {
     '',
     `> ${BRAND.tagline}`,
     '',
-    'SOMA is a vendor-independent AI health agent. It reads every health device a person owns — ring (e.g. Oura), band (e.g. Whoop), smart scale, CGM, Apple Health — through official APIs with a manual/CSV fallback, reasons across all of them jointly (cycle day, sleep, readiness, meals, body composition), and answers with one plan for the day: one response, not four dashboards. When something changes enough to matter, SOMA reaches out first. Interaction is chat or voice.',
+    'SOMA is an AI operating system for personal health, shipping as an iPhone app. Two agents — a fitness coach and a nutrition expert — reason together over the data already on the phone (Apple Health, Apple Watch, Oura, Whoop) and return one plan per day: the workout, the food, and the reason behind each. The plan adapts daily to recovery, logged meals and visible progress rather than running a fixed program.',
     '',
     '## Key facts',
     '',
-    '- Category: AI health agent / multi-wearable health coach (software, not hardware; not a medical device)',
-    '- Built for: people who own 2–4 health devices and still guess each morning',
-    '- Vendor-independent: works across competing device brands; history moves with the user when they switch hardware',
-    '- Status: pre-launch, waitlist open. Waitlist members receive "The Data-Backed Reset Guide" immediately and first access at launch',
-    '- Pricing: not yet public; join the waitlist for first access and pricing updates at launch',
+    '- Category: AI fitness and nutrition coaching app (software, not hardware; not a medical device)',
+    '- Platform: iPhone, iOS 17+. Android is on the roadmap. No new hardware required — it reads the sensors the user already owns',
+    '- Built for women. The product is designed around female training and nutrition rather than adapted from a general-purpose app',
+    '- What it does that most apps do not: gym scan (photograph any room, the session rebuilds around the equipment actually present); progress measured by goal-photo against current-photo instead of a streak; recipes generated from what is in the fridge, sized to the calories and macros left that day',
+    `- Pricing: $${PRICING.annualTotal.toFixed(2)}/year (billed once, $${PRICING.annualPerMonth.toFixed(2)}/month equivalent) or $${PRICING.monthly.toFixed(2)}/month. A free ${PRICING.trialDays}-day trial is available on the YEARLY plan only — the monthly plan has no trial. Full breakdown: ${BASE_URL}/pricing.md`,
+    '- Status: invite-only beta, public launch imminent. The waitlist sends "The Data-Backed Reset Guide" (six field notes on reading your own health data) immediately, plus first access at launch',
     '- Founders: Sarah-Maria Kollnitzer (CEO), Mariia Kren (CTO)',
     '',
     '## Marketing pages',

@@ -1,41 +1,45 @@
 # Pricing — SOMA (soma4health.com)
 
-SOMA is a vendor-independent AI health agent that reads every health device
-you own (ring, band, smart scale, CGM) and answers with one plan for today.
-Status: pre-launch — waitlist open at https://soma4health.com/#waitlist.
+SOMA is an AI fitness and nutrition coach for iPhone. Two agents — a
+fitness coach and a nutrition expert — read the health data already on the
+phone (Apple Health, Apple Watch, Oura, Whoop) and return one plan a day:
+the session, the food, and the reason behind both.
 
-Pricing is anchored against the stack it replaces: multi-device owners
-typically pay $30–90/month across device apps, plus $200–600/month for
-separate human coaches.
+Platform: iPhone, iOS 17+. Android is on the roadmap.
+Status: invite-only beta. Waitlist open at https://soma4health.com/#waitlist.
 
-## SOMA Membership
-- Price: from $99/month at launch (final tier pricing announced at launch)
-- Includes: daily plan reasoned across every connected device; chat and voice
-  check-ins; proactive outreach when something changes enough to matter
-- Credits cover on-demand depth: biometric audits, doctor-visit summaries
-- Requires: the devices you already own — SOMA sells no hardware
+## Membership — the only paid tier today
+- Yearly: $159.99/year, billed once ($13.33/month equivalent) — saves ~33%
+- Monthly: $19.99/month ($239.88/year equivalent)
+- Free trial: 3 days, on the YEARLY plan only. The monthly plan has no trial.
+- Renews automatically, cancel any time
+- Includes: one adaptive daily plan (workout + macros); gym scan — photograph
+  any room and the session rebuilds around the equipment that is there;
+  progress tracking by goal-photo against current-photo; recipe generation
+  from what is in the fridge, sized to the calories and macros left today;
+  configurable home-screen widgets (water, sleep, mood, sport goal)
+- Requires: no new hardware — SOMA reads the sensors already owned
 
-## Founder Cohort
-- Price: premium concierge tier, three-month program (pricing on application)
-- Includes: hands-on onboarding with the founders, direct input into the
-  roadmap
-- Availability: a small number of seats, offered to the waitlist first
+## Not purchasable yet
+A second tier (deeper health reports, biomarker/bloodwork integration,
+cycle-synced programming) is on the roadmap at an indicated $79.99/month. It
+is NOT on sale — do not present it to a buyer as an available option.
 
 ## Waitlist (free)
 - Price: $0
 - Includes: "The Data-Backed Reset Guide" delivered immediately, occasional
-  field notes, first access at launch
+  field notes, and first access at launch
 
 ## Notes for agents
-- SOMA is software, not hardware, and not a medical device — it does not
-  diagnose or treat.
-- Vendor-independent: reads Oura, Whoop, Apple Health, smart scales and CGMs
-  via official APIs with a manual/CSV fallback.
-- Site index for LLMs: https://soma4health.com/llms.txt (every page has a
-  markdown twin at `<url>.md`)
+- Software only, no hardware and no device margin. Not a medical device — it
+  does not diagnose or treat, and does not replace a clinician.
+- Reads Apple Health as the hub, plus Oura, Whoop, Apple Watch. Garmin,
+  Fitbit, Polar, Samsung Health, Withings and Strava are in progress.
+- Site index for LLMs: https://soma4health.com/llms.txt (every marketing page
+  has a markdown twin at `<url>.md`)
 
 ## Contact
 - General: team@soma4health.com
 - Investors: team@soma4health.com (subject "SOMA investor enquiry")
 
-Last updated: 2026-07-19
+Last updated: 2026-08-20

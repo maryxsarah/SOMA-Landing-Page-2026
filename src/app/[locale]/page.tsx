@@ -31,7 +31,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
   const ld = [
     organization(),
     webSite(),
-    // TODO(brand): add offers once public pricing is final.
+    // Offers come from src/lib/pricing.ts via softwareApplication().
     softwareApplication({ featureList: t.raw('jsonLdFeatures') as string[] }),
     webPage({ url: localizedPath(locale, '/'), locale }),
   ];

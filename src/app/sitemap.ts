@@ -8,7 +8,7 @@ import { routing, localizedPath } from '@/i18n/routing';
  * lastModified that changes every deploy trains Google to ignore it.
  * changeFrequency omitted — Google ignores it.
  */
-const LAST_MODIFIED = '2026-07-19';
+const LAST_MODIFIED = '2026-08-20';
 
 /** Builds one sitemap entry per locale for a given unprefixed (English) path,
  * each carrying `alternates.languages` pointing at every other locale's

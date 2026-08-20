@@ -1,3 +1,4 @@
+import { PRICING } from '@/lib/pricing';
 import { BASE_URL, BRAND, ORG_SAME_AS, PARENT_URL } from './constants';
 
 /** Stable @ids so search engines and LLMs merge nodes across pages. */
@@ -9,7 +10,47 @@ const SITE_ID = `${PARENT_URL}#website`;
  * Shared freshness date — drives schema dateModified AND any visible
  * "Last updated" caption so they cannot drift. Bump on real content changes.
  */
-export const APP_DATE_MODIFIED = '2026-07-19';
+export const APP_DATE_MODIFIED = '2026-08-20';
+
+/**
+ * Shipped subscription tiers as schema.org Offers, built from the single
+ * pricing source so the markup can't drift from the paywall. Annual carries
+ * its real yearly charge ($159.99), not 12 × the $13.33 marketing per-month
+ * figure — that arithmetic gives $159.96 and would be a wrong claim about
+ * what the customer is actually charged.
+ *
+ * `trialDays` rides only on the annual offer: the paywall grants the free
+ * trial on the yearly plan alone.
+ */
+const offers = () => [
+  {
+    '@type': 'Offer',
+    name: 'Monthly',
+    price: PRICING.monthly.toFixed(2),
+    priceCurrency: PRICING.currency,
+    priceSpecification: {
+      '@type': 'UnitPriceSpecification',
+      price: PRICING.monthly.toFixed(2),
+      priceCurrency: PRICING.currency,
+      billingDuration: 'P1M',
+    },
+  },
+  {
+    '@type': 'Offer',
+    name: 'Yearly',
+    price: PRICING.annualTotal.toFixed(2),
+    priceCurrency: PRICING.currency,
+    priceSpecification: {
+      '@type': 'UnitPriceSpecification',
+      price: PRICING.annualTotal.toFixed(2),
+      priceCurrency: PRICING.currency,
+      billingDuration: 'P1Y',
+    },
+    // schema.org has no free-trial property on Offer; `description` is the
+    // honest place for it rather than bending an unrelated field.
+    description: `Includes a free ${PRICING.trialDays}-day trial. Billed $${PRICING.annualTotal.toFixed(2)}/year (${PRICING.annualPerMonth.toFixed(2)}/month equivalent).`,
+  },
+];
 
 export const organization = () => ({
   '@type': 'Organization',
@@ -40,16 +81,24 @@ export const webSite = () => ({
   publisher: { '@id': ORG_ID },
 });
 
-/** Full node — HUB ONLY. Spokes emit softwareApplicationRef() instead. */
+/**
+ * Full node — HUB ONLY. Spokes emit softwareApplicationRef() instead.
+ *
+ * `operatingSystem` is iOS, not Web: SOMA ships as an iPhone app (iOS 17+),
+ * and this site is its marketing page, not the product. Offers default to
+ * the published tiers — they used to be omitted with a "add once pricing is
+ * final" TODO, which outlived the pricing going public on the homepage.
+ */
 export const softwareApplication = (opts: { featureList: string[]; offers?: object[] }) => ({
   '@type': 'SoftwareApplication',
   '@id': APP_ID,
   name: BRAND.productFull,
   applicationCategory: 'HealthApplication',
-  operatingSystem: 'Web',
+  operatingSystem: 'iOS 17.0',
   url: BASE_URL,
   dateModified: APP_DATE_MODIFIED,
   publisher: { '@id': ORG_ID },
+  offers: offers(),
   ...opts,
 });
 

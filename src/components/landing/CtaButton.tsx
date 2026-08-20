@@ -6,6 +6,13 @@ import { track } from '@/lib/analytics';
 
 interface CtaButtonProps {
   href: string;
+  /**
+   * Analytics label. Required whenever `children` isn't a plain string —
+   * an <Image> child made every App Store badge on the site report its
+   * href ("#waitlist") as its label, so the header, hero and pricing
+   * placements were indistinguishable in PostHog and GA4.
+   */
+  label?: string;
   variant?: 'primary' | 'outline' | 'outline-light' | 'badge';
   size?: 'lg' | 'sm';
   arrow?: boolean;
@@ -20,6 +27,7 @@ interface CtaButtonProps {
  */
 export const CtaButton: React.FC<CtaButtonProps> = ({
   href,
+  label,
   variant = 'primary',
   size = 'lg',
   arrow,
@@ -33,7 +41,7 @@ export const CtaButton: React.FC<CtaButtonProps> = ({
       href={href}
       onClick={() =>
         track('landing_cta_click', {
-          label: typeof children === 'string' ? children : href,
+          label: label ?? (typeof children === 'string' ? children : href),
           href,
           path: pathname ?? '/',
           variant,

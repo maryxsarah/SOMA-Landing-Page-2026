@@ -1,11 +1,11 @@
-import { CTA_HREF, CTA_LABEL } from '@/lib/launch';
+import { CTA_HREF_OFF_LANDING, CTA_LABEL } from '@/lib/launch';
 import type { SpokeBucket, SpokeDef, SpokeFaqItem } from './types';
 
 export { spokePath } from './types';
 export type { SpokeDef, SpokeBucket } from './types';
 
 /** Shared CTA across spokes — flips with LAUNCH_MODE, zero copy edits. */
-const SPOKE_CTA = { label: CTA_LABEL, href: CTA_HREF };
+const SPOKE_CTA = { label: CTA_LABEL, href: CTA_HREF_OFF_LANDING };
 
 /** Shared waitlist-status FAQ — same honest answer on every spoke. */
 const AVAILABILITY_FAQ: SpokeFaqItem = {
@@ -37,7 +37,7 @@ const ouraAdvisor: SpokeDef = {
       { dim: 'Where it lives', them: 'Inside the Oura app', us: 'One home screen — chat or voice' },
       { dim: 'Who starts the conversation', them: 'You open the app and ask', us: 'SOMA reaches out first when something changes' },
       { dim: 'If you switch hardware', them: 'Advice stays with Oura', us: 'Vendor-independent — your history moves with you' },
-      { dim: 'Price', them: 'Included with Oura membership', us: 'From $99/month at launch' },
+      { dim: 'Price', them: 'Included with Oura membership', us: 'From $19.99/month at launch' },
     ],
   },
   sections: [
@@ -94,7 +94,7 @@ const whoopCoach: SpokeDef = {
       { dim: 'Where it lives', them: 'Inside the Whoop app', us: 'One home screen — chat or voice' },
       { dim: 'Who starts the conversation', them: 'You open the app and ask', us: 'SOMA reaches out first when something changes' },
       { dim: 'If you switch hardware', them: 'Advice stays with Whoop', us: 'Vendor-independent — your history moves with you' },
-      { dim: 'Price', them: 'Included with Whoop membership', us: 'From $99/month at launch' },
+      { dim: 'Price', them: 'Included with Whoop membership', us: 'From $19.99/month at launch' },
     ],
   },
   sections: [

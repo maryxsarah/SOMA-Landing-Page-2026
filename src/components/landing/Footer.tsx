@@ -34,10 +34,12 @@ export const Footer = () => {
   const columns: FooterColumn[] = [
     {
       title: t('productTitle'),
-      links: [
-        { label: t('featuresLink'), href: '/#features' },
-        { label: t('faqLink'), href: '/#faq' },
-      ],
+      // Anchors track the kinetic v7 section ids. The old `/#features` and
+      // `/#faq` pointed at ids the redesign removed, so both links dropped
+      // the visitor at the top of `/` from every page on the site. `faqLink`
+      // is parked (not deleted — the translated label is still in
+      // messages/*.json) until an FAQ section exists on the homepage again.
+      links: [{ label: t('featuresLink'), href: '/#grid' }],
     },
     spokeColumn(t('featuresColumnTitle'), 'features', locale),
     spokeColumn(t('howToColumnTitle'), 'how-to', locale),

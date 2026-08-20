@@ -25,6 +25,10 @@ const PUBLIC_PATHS = [
   '/robots.txt',
   '/sitemap.xml',
   '/llms.txt',
+  // Static file in public/. Without this entry it ends in `.md`, misses
+  // SPOKE_BUCKET_RE in step 2, falls through to next-intl in step 4 and gets
+  // rewritten to /en/pricing.md — a 404. It shipped unreachable for a month.
+  '/pricing.md',
   '/opengraph-image',
   // AASA + friends: locale-rewriting (or auth-gating) /.well-known/
   // 404s apple-app-site-association and silently kills the app's

@@ -206,12 +206,12 @@
     "faqTitle": "Честа питања"
   },
   "home": {
-    "metaDescription": "SOMA је AI здравствени агент независан од произвођача. Чита твој прстен, наруквицу, вагу и CGM заједно и одговара једним планом за данас — не четири контролне табле.",
+    "metaDescription": "Фитнес агент и нутриционистички агент читају податке које твој iPhone већ има и дају ти један план дневно — тренинг, храну и разлог зашто.",
     "jsonLdFeatures": [
-      "Један дневни план заснован на расуђивању преко свих повезаних носивих уређаја",
-      "Ради са прстеновима, наруквицама, паметним вагама и CGM уређајима",
-      "Провере текстом или гласом — укуцај или изговори",
-      "Проактивно јављање када се нешто промени довољно да буде важно"
+      "Један адаптивни дневни план — тренинг и макрои, са образложењем за оба",
+      "Скен теретане: фотографиши просторију и тренинг се преправља око опреме која постоји",
+      "Напредак по фотографији циља наспрам тренутне фотографије, не по низу дана",
+      "Рецепти од онога што је у фрижидеру, скројени по калоријама и макроима преосталим данас"
     ]
   },
   "kinetic": {
@@ -225,13 +225,18 @@
       "h1Line1": "Your body,",
       "h1Line2": "finally decoded.",
       "lead": "A fitness agent and a nutrition agent read the data already on your iPhone and hand you one plan a day — the session, the food, the reason why.",
-      "trialLine": "Free {days}-day trial · cancel any time",
+      "trialLine": "Free {days}-day trial on the yearly plan",
       "devices": {
         "appleHealth": "Apple Health",
         "oura": "Oura",
         "appleWatch": "Apple Watch",
         "whoop": "Whoop"
       }
+    },
+    "cta": {
+      "appStoreAlt": "Download on the App Store",
+      "getGuide": "Get the free Reset Guide",
+      "guideCaption": "Six field notes on reading your data — free, sent the moment you join below."
     },
     "band": {
       "words": [
@@ -301,7 +306,7 @@
     },
     "start": {
       "h2": "Find your next best day.",
-      "priceLine": "Free {days}-day trial, then $19.99/month — or $13.33/month billed annually. One subscription, no hardware.",
+      "priceLine": "$13.33/month billed annually ($159.99/year) after a free {days}-day trial — or $19.99/month, no trial. One subscription, no hardware.",
       "disclaimer": "Cancel any time · iPhone only, Android on the roadmap",
       "devices": {
         "health": "Health",
